@@ -68,39 +68,39 @@
                 <form action="student.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="FirstName">FirstName</label>
-                            <input type="text" class="form-control" id="FirstName" placeholder="FirstName" name="FirstName">
+                            <label for="firstname">ชื่อ</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="LastName">LastName</label>
-                            <input type="text" class="form-control" id="LastName" placeholder="LastName" name="LastName">
+                            <label for="lastname">นามสกุล</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Denver" name="lastname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="CardNo">CardNo</label>
-                            <input type="int" class="form-control" id="CardNo" placeholder="CardNo" name="CardNo">
+                            <label for="cardno">เลขบัตรประชาชน</label>
+                            <input type="int" class="form-control" id="cardno" placeholder="เลขบัตร 13 หลัก " name="cardno">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="DateofBirth<">DateofBirth</label>
-                            <input type="Date" class="form-control" id="DateofBirth" placeholder="DateofBirth" name="DateofBirth">
+                            <label for="birthday<">วันเกิด</label>
+                            <input type="Date" class="form-control" id="birthday" placeholder="birthday" name="birthday">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Tel">Telephone-number</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="Telephone-number" name="Tel">
+                            <label for="tel">เบอร์โทรศัพท์</label>
+                            <input type="int" class="form-control" id="tel" placeholder="Telephone-number" name="tel">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Gender">Gender</label>
-                            <select name="Gender" class="form-control">
-                                <option value="Female">Female</option>
-                                <option value="Male">Male</option>
+                            <label for="gender">เพศ</label>
+                            <select name="gender" class="form-control">
+                                <option value="Female">หญิง</option>
+                                <option value="Male">ชาย</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Address">Address</label>
-                            <input type="text" class="form-control" id="Address" placeholder="Address" name="Address">
+                            <label for="address">ที่อยู่</label>
+                            <input type="text" class="form-control" id="address" placeholder="58 หมู่ 8 " name="address">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Province">Province</label>
-                            <select name="Province" class="form-control">
+                            <label for="province">จังหวัด</label>
+                            <select name="province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>
                                 <option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -181,12 +181,12 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="ZIPcode">ZIPcode</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="ZIPcode" name="ZIPcode">
+                            <label for="zipcode">รหัสไปรษณีย์</label>
+                            <input type="int" class="form-control" id="zipcode" placeholder="10410" name="zipcode">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Occupation">Occupation</label>
-                            <input type="text" class="form-control" id="Occupation" placeholder="Occupation " name="Occupation">
+                            <label for="occupation">อาชีพ</label>
+                            <input type="text" class="form-control" id="occupation" placeholder="นักเรียนนักศึกษา " name="occupation">
                         </div>
 
                         <div style="width:100%">
