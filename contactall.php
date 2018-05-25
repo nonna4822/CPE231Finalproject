@@ -6,5 +6,6 @@
   </head>
   <body>
     <h1>contact</h1>
+    <button type="button" onclick="location.href='homepage.php'"> กลับไปยังหน้าหลัก </button>
   </body>
 </html>

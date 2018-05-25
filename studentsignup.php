@@ -65,7 +65,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="element2">
-                <form action="student.php" method="POST">
+                <form action="studentinsert.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">ชื่อ</label>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="tel">เบอร์โทรศัพท์</label>
-                            <input type="int" class="form-control" id="tel" placeholder="Telephone-number" name="tel">
+                            <input type="int" class="form-control" id="tel" placeholder="เบอร์โทรศัพท์" name="tel">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="gender">เพศ</label>

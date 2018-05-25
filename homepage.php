@@ -1,3 +1,11 @@
+<?php
+  session_start();
+
+  if(isset($_SESSION['firstname']) ){
+    echo "สวัสดีครับ คุณ".$_SESSION['firstname']." ".$_SESSION['lastname'];
+  }
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,13 +15,13 @@
   </head>
   <body>
     <h1> Homepage </h1>
-    <button onclick="location.href ='studentsignup.php'">
-      สร้างบัญชี
-    </button>
+    <?php
+      if(!isset($_SESSION['firstname']) ){
+        echo "<button onclick=\"location.href ='studentsignup.php'\">สร้างบัญชี</button>";
+        echo "<button onclick=\"location.href ='login.html'\">เข้าสู่ระบบ</button>";
+      }else echo "<button onclick=\"location.href ='logout.php'\">ออกจากระบบ</button>";
+    ?>
 
-    <button onclick="location.href ='login.php'">
-      เข้าสู่ระบบ
-    </button>
 
     <button onclick="location.href ='contactall.php'">
       ติดต่อเรา
