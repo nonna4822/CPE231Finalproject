@@ -23,16 +23,18 @@ if($row['cardno'] != NULL){
   echo "เลชบัตรประชาชนนี้เคยใช้ในการสมัครแล้ว กรุณาติดต่อผู้ดูแลระบบ";
   echo "<script>setTimeout(\"location.href = 'studentsignup.php';\",1500);</script>";
 }else {
-  $firstname = mysqli_real_escape_string($con, $_POST['firstname']);
-  $lastname = mysqli_real_escape_string($con, $_POST['lastname']);
-  $cardno = mysqli_real_escape_string($con, $_POST['cardno']);
-  $birthday=mysqli_real_escape_string($con,$_POST['birthday']);
-  $gender=mysqli_real_escape_string($con,$_POST['gender']);
-  $tel = mysqli_real_escape_string($con,$_POST['tel']);
-  $address=mysqli_real_escape_string($con,$_POST['address']);
-  $province=mysqli_real_escape_string($con,$_POST['province']);
-  $zipcode=mysqli_real_escape_string($con,$_POST['zipcode']);
-  $occupation=mysqli_real_escape_string($con,$_POST['occupation']);
+  $firstname = mysqli_real_escape_string($con, $_POST['firstname']);//
+  $lastname = mysqli_real_escape_string($con, $_POST['lastname']);//
+  $cardno = mysqli_real_escape_string($con, $_POST['cardno']);//
+  $birthday=mysqli_real_escape_string($con,$_POST['birthday']);//
+  $gender=mysqli_real_escape_string($con,$_POST['gender']);//
+  $tel = mysqli_real_escape_string($con,$_POST['tel']);//
+  $address=mysqli_real_escape_string($con,$_POST['address']);//
+  $province=mysqli_real_escape_string($con,$_POST['province']);//
+  $zipcode=mysqli_real_escape_string($con,$_POST['zipcode']);//
+  $graduate=mysqli_real_escape_string($con,$_POST['graduate']);//
+  $position=mysqli_real_escape_string($con,$_POST['position']);//
+  $branchname=mysqli_real_escape_string($con,$_POST['branchname']);//
 
   $sql="INSERT INTO student(firstname, lastname,cardno,birthday,gender,tel,address,province,zipcode,occupation) VALUES
   ('$firstname', '$lastname','$cardno','$birthday','$gender','$tel','$address','$province','$zipcode','$occupation')";
@@ -46,7 +48,7 @@ if($row['cardno'] != NULL){
     $_SESSION['firstname'] = $firstname;
     $_SESSION['lastname'] = $lastname;
     mysqli_close($con);
-    header("Location: signupsuccess.php");
+    header("Location: staffrecive.php");
     exit;
   }
   mysqli_close($con);

@@ -144,39 +144,39 @@
                 <form action="staffinsert.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="FirstName">FirstName</label>
-                            <input type="text" class="form-control" id="FirstName" placeholder="FirstName" name="FirstName">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="LastName">LastName</label>
-                            <input type="text" class="form-control" id="LastName" placeholder="LastName" name="LastName">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter Surname" name="lastname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="CardNo">CardNo</label>
-                            <input type="int" class="form-control" id="CardNo" placeholder="CardNo" name="CardNo">
+                            <label for="cardno">Card No.</label>
+                            <input type="int" class="form-control" id="cardno" placeholder="Enter Cardinal Number" name="cardno">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="DateofBirth<">DateofBirth</label>
-                            <input type="Date" class="form-control" id="DateofBirth" placeholder="DateofBirth" name="DateofBirth">
+                            <label for="birthday<">Birthday</label>
+                            <input type="Date" class="form-control" id="birthday"  name="birthday">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Tel">Telephone-number</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="Telephone-number" name="Tel">
+                            <label for="tel">Telephone-number</label>
+                            <input type="int" class="form-control" id="tel" placeholder="xxx-xxxxxxx" name="tel">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Gender">Gender</label>
-                            <select name="Gender" class="form-control">
+                            <label for="gender">Gender</label>
+                            <select name="gender" class="form-control">
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Address">Address</label>
-                            <input type="text" class="form-control" id="Address" placeholder="Address" name="Address">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" required = "57" name="address">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Province">Province</label>
-                            <select name="Province" class="form-control">
+                            <label for="province">Province</label>
+                            <select name="province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>
                                 <option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -257,16 +257,16 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="ZIPcode">ZIPcode</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="ZIPcode" name="ZIPcode">
+                            <label for="zipcode">ZIPcode</label>
+                            <input type="int" class="form-control" id="zipcode" value="78455" name="zipcode">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Graduate">Graduate</label>
-                            <input type="text" class="form-control" id="Graduate" placeholder="Graduate" name="Graduate">
+                            <label for="graduate">Graduate</label>
+                            <input type="text" class="form-control" id="graduate" value="Computer Engineering" name="graduate">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="BranchName">BranchName</label>
-                            <select name="BranchName" class="form-control">
+                            <label for="branchname">BranchName</label>
+                            <select name="branchname" class="form-control">
                                 <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
                                 <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
                                 <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
@@ -281,8 +281,8 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6 ">
-                            <label for="Position">Position</label>
-                            <select name="Position" class="form-control">
+                            <label for="position">Position</label>
+                            <select name="position" class="form-control">
                                 <option value="Manager">Manager</option>
                                 <option value="Teacher">Teacher</option>
                             </select>
