@@ -1,9 +1,5 @@
 <?php
   session_start();
-
-  if(isset($_SESSION['firstname']) ){
-    echo "สวัสดีครับ คุณ".$_SESSION['firstname']." ".$_SESSION['lastname'];
-  }
  ?>
 
 <!DOCTYPE html>
@@ -19,7 +15,11 @@
       if(!isset($_SESSION['firstname']) ){
         echo "<button onclick=\"location.href ='studentsignup.php'\">สร้างบัญชี</button>";
         echo "<button onclick=\"location.href ='login.html'\">เข้าสู่ระบบ</button>";
-      }else echo "<button onclick=\"location.href ='logout.php'\">ออกจากระบบ</button>";
+      }else{
+        echo "<button onclick=\"location.href ='studentview.php'\">".$_SESSION['firstname']." ".$_SESSION['lastname']."</button>";
+        echo "<button onclick=\"location.href ='logout.php'\">ออกจากระบบ</button>";
+      }
+
     ?>
 
 

@@ -69,23 +69,23 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="firstname">ชื่อ</label>
-                            <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname">
+                            <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lastname">นามสกุล</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Denver" name="lastname">
+                            <input type="text" class="form-control" id="lastname" placeholder="Denver" name="lastname" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="cardno">เลขบัตรประชาชน</label>
-                            <input type="int" class="form-control" id="cardno" placeholder="เลขบัตร 13 หลัก " name="cardno">
+                            <input type="int" class="form-control" id="cardno" placeholder="เลขบัตร 13 หลัก " name="cardno" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="birthday<">วันเกิด</label>
-                            <input type="Date" class="form-control" id="birthday" placeholder="birthday" name="birthday">
+                            <input type="Date" class="form-control" id="birthday" placeholder="birthday" name="birthday" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="tel">เบอร์โทรศัพท์</label>
-                            <input type="int" class="form-control" id="tel" placeholder="เบอร์โทรศัพท์" name="tel">
+                            <input type="int" class="form-control" id="tel" placeholder="เบอร์โทรศัพท์" name="tel" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="gender">เพศ</label>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="address">ที่อยู่</label>
-                            <input type="text" class="form-control" id="address" placeholder="58 หมู่ 8 " name="address">
+                            <input type="text" class="form-control" id="address" placeholder="58 หมู่ 8 " name="address" value = "58/8"required >
                         </div>
                         <div class="form-group col-md-6">
                             <label for="province">จังหวัด</label>
@@ -182,15 +182,15 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="zipcode">รหัสไปรษณีย์</label>
-                            <input type="int" class="form-control" id="zipcode" placeholder="10410" name="zipcode">
+                            <input type="int" class="form-control" id="zipcode" placeholder="10410" name="zipcode" value="73000" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="occupation">อาชีพ</label>
-                            <input type="text" class="form-control" id="occupation" placeholder="นักเรียนนักศึกษา " name="occupation">
+                            <input type="text" class="form-control" id="occupation" placeholder="นักเรียนนักศึกษา " value="นักตกปลา"name="occupation" required>
                         </div>
 
                         <div style="width:100%">
-                            <input type="submit" value="submit" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;">
+                            <input type="submit" value="submit" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;" required>
                         </div>
                     </div>
                 </form>

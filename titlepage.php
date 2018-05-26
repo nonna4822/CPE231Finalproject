@@ -118,12 +118,12 @@
                         </div>
                         <div class="form-group">
                                 <a href="homepage.php" class="button">Home</a>
-                                <a href="login.php" class="button">Login</a>
+                                <a href="login.html" class="button">Login</a>
 
                                 <div class="dropdown">
                                     <button onclick="myFunction()" class="dropbtn">Sign Up</button>
                                     <div id="myDropdown" class="dropdown-content">
-                                        <a href="studentregister.php">Student</a>
+                                        <a href="studentsignup.php">Student</a>
                                         <a href="staffregister.php">Apply for job</a>
                                     </div>
                                 </div>

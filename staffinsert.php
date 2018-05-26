@@ -6,11 +6,11 @@ include 'connect.php';
 
 //query sql to find
 $cardno = $_POST['cardno'];
-$sql= "SELECT cardno FROM student WHERE cardno='$cardno'";
+$sql= "SELECT cardno FROM staff WHERE cardno='$cardno'";
 
 if (!mysqli_query($con,$sql)) {
     die('Error: ' . mysqli_error($con));
-    echo "<script>setTimeout(\"location.href = 'studentsignup.php';\",1500);</script>";
+    echo "<script>setTimeout(\"location.href = 'staffregister.php';\",1500);</script>";
 }
 
 $result = mysqli_query($con, $sql);

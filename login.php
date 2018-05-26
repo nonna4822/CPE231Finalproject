@@ -19,7 +19,7 @@ $sql = "SELECT firstname , lastname FROM student WHERE cardno = '$cardno' AND te
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 
-if($row === NULL){
+if($row['firstname'] == ""){
   echo "เลขบัตรประชาชน หรือ เบอร์โทรศัพท์ ไม่ถูกต้อง !";
   echo "<script>setTimeout(\"location.href = 'login.html';\",1500);</script>";
 }else {
