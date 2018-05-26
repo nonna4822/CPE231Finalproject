@@ -89,7 +89,7 @@
             <div class="col-sm" style="text-align: center">
                 <div class="form-group">
                     <div>
-                        <img src="picture/hi-2.jpg" alt="" width=180px;>
+                        <img src="picture/registericon.png" alt="" width=180px;>
                     </div>
                     <h1><strong>ลงทะเบียนสำเร็จ</strong></h1>
                     <h1><strong>ยินดีต้อนรับ</strong></h1>

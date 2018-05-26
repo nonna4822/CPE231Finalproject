@@ -42,7 +42,7 @@
             width: 50px;
             position: absolute;
             z-index: 999;
-            bottom: -160px;
+            bottom: -90px;
         }
     </style>
 </head>
@@ -50,13 +50,13 @@
 <body>
 
     <div class=picstyle>
-        <img src="../pictures/more07.png" alt="" width=500px;>
+        <img src="picture/more07.png" alt="" width=500px;>
     </div>
 
     <div class="container-fluid">
         <div class="row">
             <div class="element">
-                <img src="../pictures/graduation.png" alt="" width="100px">
+                <img src="picture/graduation.png" alt="" width="100px">
                 <span style="padding-left: 30px;">Student Register</span>
             </div>
         </div>

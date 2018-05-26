@@ -9,7 +9,7 @@ $cardno = $_POST['cardno'];
 $sql= "SELECT cardno FROM staff WHERE cardno='$cardno'";
 
 if (!mysqli_query($con,$sql)) {
-    die('Error: ' . mysqli_error($con));
+    echo('Error: ' . mysqli_error($con));
     echo "<script>setTimeout(\"location.href = 'staffregister.php';\",1500);</script>";
 }
 
@@ -34,14 +34,14 @@ if($row['cardno'] != NULL){
   $zipcode=mysqli_real_escape_string($con,$_POST['zipcode']);//
   $graduate=mysqli_real_escape_string($con,$_POST['graduate']);//
   $position=mysqli_real_escape_string($con,$_POST['position']);//
-  $branchname=mysqli_real_escape_string($con,$_POST['branchname']);//
+  $branchid=mysqli_real_escape_string($con,$_POST['branchid']);// 12
 
-  $sql="INSERT INTO student(firstname, lastname,cardno,birthday,gender,tel,address,province,zipcode,occupation) VALUES
-  ('$firstname', '$lastname','$cardno','$birthday','$gender','$tel','$address','$province','$zipcode','$occupation')";
+  $sql="INSERT INTO staff(firstname, lastname,cardno,birthday,gender,tel,address,province,zipcode,graduate,position,branchid,status) VALUES
+  ('$firstname', '$lastname','$cardno','$birthday','$gender','$tel','$address','$province','$zipcode','$graduate','$position','$branchid','notconfirm')";
 
   if (!mysqli_query($con,$sql)) {
-      die('Error: ' . mysqli_error($con));
-      echo "<script>setTimeout(\"location.href = 'studentsignup.php';\",1500);</script>";
+      echo('Error na: ' . mysqli_error($con));
+      echo "<script>setTimeout(\"location.href = 'staffregister.php';\",1500);</script>";
   }
 
   if (mysqli_query($con,$sql)){

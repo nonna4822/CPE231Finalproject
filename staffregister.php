@@ -106,7 +106,7 @@
 <body>
     <!-- errorpic -->
     <div class=picstyle>
-        <img src="picture/" alt="" width=500px;>
+        <img src="picture/OBDPS10.png" alt="" width=500px;>
     </div>
     <div class=text>
         <p align="right">
@@ -132,7 +132,7 @@
         <div class="row">
             <div class="element">
                 <!-- errorpic -->
-                <img src="../pictures/notepad.png" alt="" width="100px">
+                <img src="picture/notepad.png" alt="" width="100px">
                 <span style="padding-left: 30px;">Staff Register</span>
             </div>
         </div>
@@ -265,19 +265,18 @@
                             <input type="text" class="form-control" id="graduate" value="Computer Engineering" name="graduate">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="branchname">BranchName</label>
-                            <select name="branchname" class="form-control">
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
-                                <option value="กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ">กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ</option>
+                            <label for="branchid">BranchName</label>
+                            <select name="branchid" class="form-control">
+                                <option value="1">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
+                                <option value="2">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
+                                <option value="3)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
+                                <option value="4">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
+                                <option value="5">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
+                                <option value="6">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
+                                <option value="7">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
+                                <option value="8">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
+                                <option value="9">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
+                                <option value="10">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6 ">
