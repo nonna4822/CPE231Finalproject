@@ -68,38 +68,38 @@
                 <form action="studentinsert.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="firstname">ชื่อ</label>
-                            <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" required>
+                            <label for="firstname">Firstname</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="Enter your Firstname" name="firstname" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="lastname">นามสกุล</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Denver" name="lastname" required>
+                            <label for="lastname">Surname</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter your Lastname" name="lastname" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="cardno">เลขบัตรประชาชน</label>
-                            <input type="int" class="form-control" id="cardno" placeholder="เลขบัตร 13 หลัก " name="cardno" required>
+                            <label for="cardno">Cardinal Number</label>
+                            <input type="int" class="form-control" id="cardno" name="cardno" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="birthday<">วันเกิด</label>
-                            <input type="Date" class="form-control" id="birthday" placeholder="birthday" name="birthday" required>
+                            <label for="birthday<">Birthday</label>
+                            <input type="Date" class="form-control" id="birthday"  name="birthday" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="tel">เบอร์โทรศัพท์</label>
-                            <input type="int" class="form-control" id="tel" placeholder="เบอร์โทรศัพท์" name="tel" required>
+                            <label for="tel">Tel. phone</label>
+                            <input type="int" class="form-control" id="tel"  name="tel" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="gender">เพศ</label>
+                            <label for="gender">Gender</label>
                             <select name="gender" class="form-control">
-                                <option value="Female">หญิง</option>
-                                <option value="Male">ชาย</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="address">ที่อยู่</label>
-                            <input type="text" class="form-control" id="address" placeholder="58 หมู่ 8 " name="address" value = "58/8"required >
+                            <label for="address">Location</label>
+                            <input type="text" class="form-control" id="address" name="address" value = "58/8"required >
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="province">จังหวัด</label>
+                            <label for="province">Province</label>
                             <select name="province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>

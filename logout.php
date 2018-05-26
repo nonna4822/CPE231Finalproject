@@ -3,6 +3,6 @@
   // destroy the session
   session_destroy();
 
-  header("Location: homepage.php"); //go to student view
+  header("Location: homepage.php"); //go to homepage
   exit;
  ?>

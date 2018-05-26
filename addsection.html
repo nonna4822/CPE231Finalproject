@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Staff Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <!-- import font to html -->
+    <link rel="stylesheet" type="text/css" href="font.css">
+  </head>
+  <body>
+    <h1>Add sections.</h1>
+
+
+
+                <form action="addsection.php" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="sectionname">Sectionname</label>
+                            <input type="text" class="form-control" id="sectionname"  name="sectionname" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="subjectid">Subject</label>
+                            <select name="subjectid" class="form-control">
+                                <option value="1">ช่างยนต์</option>
+                                <option value="2">ทักษะการทำของหวาน</option>
+                                <option value="3">ช่างไฟ</option>
+                                <option value="4">ช่างแอร์</option>
+                                <option value="5">ช่างเครื่องเสียง(Sound Engineer)</option>
+                                <option value="6">นวดแผนไทย</option>
+                                <option value="7">ทักษะภาษาอังกฤษ</option>
+                                <option value="8">แต่งหน้า แต่งเล็บ</option>
+                                <option value="9">ช่างผมสุภาพบุรุษ</option>
+                                <option value="10">ทักษะการทำอาหารไทย</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="maxstudent">Maxstudent</label>
+                            <input type="text" class="form-control" id="maxstudent" name="maxstudent" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="semester">Semester</label>
+                            <input type="text" class="form-control" id="semester"  name="semester" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="shift<">Shift</label>
+                            <input type="text" class="form-control" placeholder="Morning , Afternoon , Evening"id="shift"  name="shift" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cost">Cost</label>
+                            <input type="text" class="form-control" id="cost" name="cost" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="classid">Class No.</label>
+                            <input type="text" class="form-control" id="classid" name="classid" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="branchid">BranchName</label>
+                            <select name="branchid" class="form-control">
+                                <option value="1">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
+                                <option value="2">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
+                                <option value="3)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
+                                <option value="4">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
+                                <option value="5">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
+                                <option value="6">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
+                                <option value="7">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
+                                <option value="8">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
+                                <option value="9">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
+                                <option value="10">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="time">Time</label>
+                            <input type="text" class="form-control" placeholder="xx.xx-xx.xx"id="time" name="time" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="day">Day</label>
+                            <input type="text" class="form-control" placeholder="Mon-Fri,Sat-Sun"id="day" name="day" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="opendey">Openday</label>
+                            <input type="date" class="form-control" id="opendey" name="opendey" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="closeday">Closeday</label>
+                            <input type="date" class="form-control" id="closeday" name="closeday" required>
+                        </div>
+
+
+                        <div style="width:100%">
+                            <input type="submit" value="Add" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;" required>
+                        </div>
+                    </div>
+                </form>
+
+
+  </body>
+</html>

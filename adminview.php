@@ -19,14 +19,18 @@
   <body>
     <h1>Admin View</h1>
 
-    <button type="button" onclick="location.href='homepage.php'"> กลับไปยังหน้าหลัก </button>
+    <button type="button" onclick="location.href='homepage.php'"> homepage </button>
 
-    <button type="button" >เพิ่มวิชาเรียนตามเซคชั่น </button>
+    <button type="button" onclick="location.href='addsection.html'" >Add sections </button>
 
-    <button type="button" >เพิ่มสาขา </button>
+    <button type="button" onclick="location.href='addsection.html'" >delete subject </button>
 
-    <button type="button" >ยืนยันการจ่ายตัง </button>
+    <button type="button" >Add branch </button>
 
-    <button type="button" >ยืนยันการจ่ายตัง </button>
+    <button type="button" >Delete branch </button>
+
+    <button type="button" >Enroll request </button>
+
+    <button type="button" >Register request </button>
   </body>
 </html>
