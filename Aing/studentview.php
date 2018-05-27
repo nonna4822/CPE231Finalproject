@@ -93,6 +93,12 @@ h2{
         .table-bordered {
             width: 100%;
         }
+        .gg td, .gg th , .gg tr,
+        .table-bordered thead td, .table-bordered thead th{
+            border:4px solid white; 
+           
+            
+        }
     </style>
 </head>
 
@@ -133,11 +139,11 @@ h2{
         </div>
     </div>
 
-    <div class="container-fluid" style="background-color:rgba(185, 245, 252,0.6);">
+    <div class="container-fluid" style="background-image:linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
         <h2><strong>Enrollment Table</strong></h2>
-        <table class="table table-bordered" style="font-size:35px; text-align:center;">
+        <table class="table table-bordered gg" style="font-size:35px; text-align:center;">
             <thead>
-                <tr>
+                <tr style="color:#6E038E;font-size:40px;">
                     <th>Subject ID</th>
                     <th>Subject Title</th>
                     <th>Status</th>
