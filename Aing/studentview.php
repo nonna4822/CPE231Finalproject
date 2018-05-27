@@ -3,6 +3,7 @@
 
 <head>
     <title>Student View</title>
+    <script src="myscripts.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -109,11 +110,11 @@ h2{
                 <div class="col">
                     <div class="col-sm-5" style="color:white; font-size:35px; text-align:center;margin-left:800px;">
                         <div class="form-group">
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='homepage.php' class="button1" style="width:250px">
                                 <img src="../webpage/house.png" alt="" width="30px">
                                 <strong> Home</strong>
                             </a>
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='logout.php' class="button1" style="width:250px">
                                 <img src="../pictures/login (1).png" alt="" width="40px">
                                 <strong> Log out</strong>
                             </a>
@@ -122,13 +123,13 @@ h2{
 
                     <div class="col-sm-12" style="color:white; font-size:35px; text-align:left;">
                         <div class="form-group">
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='studentview.php' class="button1" style="width:250px">
                                 <strong> Hi, Username</strong>
                             </a>
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='enrollment.php' class="button1" style="width:250px">
                                 <strong> Enrollment</strong>
                             </a>
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='editprofile-student.php' class="button1" style="width:250px">
                                 <strong> Edit Profile</strong>
                             </a>
                         </div>

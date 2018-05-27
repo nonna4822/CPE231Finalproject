@@ -95,29 +95,38 @@
         <div class="row">
             <div class="col">
                 <div class="menubar">
-                    <div class="col-sm-4" style="color:white; font-size:35px; text-align:center;margin-left:880px; ">
+                    <div class="col-sm-4" style="color:white; font-size:35px; text-align:center;margin-left:850px; ">
                         <div class="form-group">
-                            <a href="#" class="button1" style="width:30%">
-                                <img src="picture/house.png" alt="" width="30%">
+                            <a href='homepage.php' class="button1" style="width:30%">
+                                <img src="../webpage/house.png" alt="" width="30%">
                                 <strong> Home</strong>
                             </a>
-                            <a href="#" class="button1" style="width:30%">
-                                <img src="picture/login (1).png" alt="" width="30%">
-                                <strong> Log in</strong>
-                            </a>
-                            <a href="#" class="button1" style="width:30%">
-                                <img src="picture/phone.png" alt="" width="30%">
-                                <strong> Contact</strong>
-                            </a>
+                            <?php
+      if(isset($_SESSION['firstname']) ){
+        echo"
+        <a href='logout.php' class=\"button1\" style=\"width:30%\">
+        <img src=\"../pictures/login (1).png\" alt=\"\" width=\"30%\">
+        <strong> Log out</strong>
+    </a>";}
+    else {echo"<a href='login.html' class=\"button1\" style=\"width:30%\">
+        <img src=\"../pictures/login (1).png\" alt=\"\" width=\"30%\">
+        <strong> Log in</strong>
+    </a>";}
+                            ?>
+                                <a href="#" class="button1" style="width:30%">
+                                    <img src="../pictures/folder.png" alt="" width="20%">
+                                    <strong> ข้อมูลเชิงลึก</strong>
+                                </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="row">
         <div class="element">
-            <img src="picture/question.png" alt="" width="100px">
+            <img src="../pictures/question.png" alt="" width="100px">
             <span style="padding-left:20px;">Where can you study?</span>
         </div>
     </div>
@@ -128,7 +137,7 @@
                 <strong>We have many branches that offer for you!</strong>
             </h2>
             <!-- Button to Open the Modal -->
-            <img src="picture/17755-NRF9UM.png" alt="" width="30%">
+            <img src="../pictures/17755-NRF9UM.png" alt="" width="30%">
             <div>
                 <h2>"Click the button to view more information"</h2>
             </div>

@@ -78,8 +78,8 @@
                     <h2>** Your ID-Card is Username 11xxxxxxxxxxx **</h2>
                     <h2>** ** Your Tel. is password 08xxxxxxxx **</h2>
                     <div class="form-group">
-                        <a href="#" class="button">Home</a>
-                        <a href="#" class="button">Login</a>
+                        <a href='homepage.php' class="button">Home</a>
+                        <a href='login.html' class="button">Login</a>
                     </div>
                 </div>
             </div>
