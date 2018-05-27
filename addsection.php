@@ -4,18 +4,18 @@ session_start();
 //connect
 include 'connect.php';
 
-//query sql to find sections ************
-//1.sections same ( sectionname && subjectid && branchname) ? ไม่ให้ลง section เดิมซ้ำ **************
-//2.class exsit ?
-//3.class same ? ( classid && shift ) ? มี section อื่น จองแล้ว ***********
+// recive from form
 
 $sectionname = mysqli_real_escape_string($con,$_POST['sectionname']);
 $subjectid = mysqli_real_escape_string($con,$_POST['subjectid']);
 $branchid = mysqli_real_escape_string($con,$_POST['branchid']);
-$classid = mysqli_real_escape_string($con,$_POST['classid']);
+$classno = mysqli_real_escape_string($con,$_POST['classno']);
 $shift = mysqli_real_escape_string($con,$_POST['shift']);
+$openday = mysqli_real_escape_string($con,$_POST['openday']);
+$closeday = mysqli_real_escape_string($con,$_POST['closeday']);
+$day = mysqli_real_escape_string($con,$_POST['day']);
 
-// *********** check same section ? in section table ***************
+// *********** check wether section exist ?
 $sql= "SELECT sectionid FROM section WHERE sectionname='$sectionname' AND subjectid = '$subjectid' AND branchid = '$branchid'";
 
 if (!mysqli_query($con,$sql)) {
@@ -26,19 +26,48 @@ if (!mysqli_query($con,$sql)) {
 $result = mysqli_query($con, $sql);
 $row_1 = mysqli_fetch_assoc($result);
 
-if($row_1['sectionid'] != NULL){ //แสดงว่ามีอยู่แล้ว
+if($row_1['sectionid'] != NULL){ //แสดงว่าลงซ้ำเซคชั่น
   mysqli_close($con);
   echo "มี Section นี้ในระบบแล้ว กรุณาอย่ากรอกซ้ำ";
-  // echo "<script>setTimeout(\"location.href = 'addsection.html';\",1500);</script>";
+  echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }else {
-  echo "นำไปพิจารณาห้องว่างก่อนครับ"."<br  />";
+
+  // ถ้าไม่มีก็เพิ่ม section //
+  $sectionname = mysqli_real_escape_string($con,$_POST['sectionname']);
+  $maxstudent = mysqli_real_escape_string($con,$_POST['maxstudent']);
+  $cost = mysqli_real_escape_string($con,$_POST['cost']);
+  $semester = mysqli_real_escape_string($con,$_POST['semester']);
+  $subjectid = mysqli_real_escape_string($con,$_POST['subjectid']);
+  $branchid = mysqli_real_escape_string($con,$_POST['branchid']);
+  $shift = mysqli_real_escape_string($con,$_POST['shift']);
+
+  $sql="INSERT INTO section(sectionname, maxstudent,cost,semester,subjectid,branchid,shift) VALUES
+  ('$sectionname', '$maxstudent','$cost','$semester','$subjectid','$branchid','$shift')";
+
+  if (!mysqli_query($con,$sql)) {
+      echo('error : insert section ' . mysqli_error($con));
+      echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+  }else echo "เพิ่ม Section สำเร็จ";
 }
 
-// *********** check class exist ? in class table ***************
-$sql= "SELECT classid FROM class WHERE branchid='$branchid' AND classid = '$classid'";
+
+// หยิบ sectionid ออกมา เตรียมนำไปใช้ต่อ
+$sql= "SELECT sectionid FROM section WHERE sectionname='$sectionname' AND subjectid = '$subjectid' AND branchid = '$branchid'";
 
 if (!mysqli_query($con,$sql)) {
-    echo('Error: class table' . mysqli_error($con));
+    echo('error : inside#01 ' . mysqli_error($con));
+    // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+}
+
+$result = mysqli_query($con, $sql);
+$row_1 = mysqli_fetch_assoc($result);
+$q_sectionid = $row_1['sectionid'];
+
+// *********** check class exist ? in class table ***************
+$sql= "SELECT classid FROM class WHERE branchid='$branchid' AND classno = '$classno'";
+
+if (!mysqli_query($con,$sql)) {
+    echo('Error: check class table' . mysqli_error($con));
     // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }
 
@@ -49,15 +78,31 @@ if($row_2['classid'] != NULL){ //มีห้องนี้อยู่จร�
   echo "พบห้องเรียน จะตรวจสอบว่าว่างหรือไม่ในขั้นตอนต่อไป";
   // echo "<script>setTimeout(\"location.href = 'addsection.html';\",1500);</script>";
 }else {
-  echo "ไม่พบห้องนี้ในระบบ ท่านจำเป็นต้องกรอกห้องใหม่เพิ่มเข้าไปในสาขา ต้องการเพิ่มตอนนี้เลยหรือไม่ ? "."<br  />";
-  echo "<button type=\"button\" onclick=\"location.href='addclass.html'\"> Yes </button>";
-  echo "<button type=\"button\" onclick=\"location.href='addsection.html'\"> Iqnore </button>";
-  mysqli_close($con);
+  // ไม่มีก็เพิ่มห้องเข้าไป
+  $sql="INSERT INTO class(classno, branchid) VALUES ('$classno', '$branchid')";
+
+  if (!mysqli_query($con,$sql)) {
+      echo('error : insert class ' . mysqli_error($con));
+      // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+  }else echo "เพิ่มห้องเข้าไปเรียบร้อย";
 }
+
+//หยิบ classid ออกมาเตรียมไปใช้
+$sql= "SELECT classid FROM class WHERE branchid='$branchid' AND classno = '$classno'";
+
+if (!mysqli_query($con,$sql)) {
+    echo('Error: check class table' . mysqli_error($con));
+    // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+}
+
+$result = mysqli_query($con, $sql);
+$row_2 = mysqli_fetch_assoc($result);
+$q_classid = $row_2['classid'];
+
 
 // ********** check same schedule ? ****************
 $sql = "SELECT s.sectionid FROM section s LEFT join schedule sc on sc.sectionid = s.sectionid
-WHERE s.shift = '$shift' AND sc.classid = '$classid' ";
+WHERE s.shift = '$shift' AND sc.classid = '$q_classid' ";
 
 if (!mysqli_query($con,$sql)) {
     echo('Error: section table' . mysqli_error($con));
@@ -68,47 +113,19 @@ $result = mysqli_query($con, $sql);
 $row_3 = mysqli_fetch_assoc($result);
 
 if($row_3['sectionid'] != NULL){ //แสดงว่ามีอยู่แล้ว
-  mysqli_close($con);
   echo "ห้องที่จะใช้นี้ ถูกเลือกไว้ใน Schedule อื่นแล้ว ( เต็มนั่นเอง ) กรุณาเลือกห้องใหม่ ";
-  // echo "<script>setTimeout(\"location.href = 'addsection.html';\",1500);</script>";
+  echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }else {
-  echo "ห้องว่างครับ";
-}
 
-// now table schedule and sections
-// $sql= "SELECT classid FROM class WHERE sectionname='$sectionname' AND subjectid = '$subjectid' AND branchid = '$branchid'";
-// //
-// // else {
-// //   $firstname = mysqli_real_escape_string($con, $_POST['firstname']);//
-// //   $lastname = mysqli_real_escape_string($con, $_POST['lastname']);//
-// //   $cardno = mysqli_real_escape_string($con, $_POST['cardno']);//
-// //   $birthday=mysqli_real_escape_string($con,$_POST['birthday']);//
-// //   $gender=mysqli_real_escape_string($con,$_POST['gender']);//
-// //   $tel = mysqli_real_escape_string($con,$_POST['tel']);//
-// //   $address=mysqli_real_escape_string($con,$_POST['address']);//
-// //   $province=mysqli_real_escape_string($con,$_POST['province']);//
-// //   $zipcode=mysqli_real_escape_string($con,$_POST['zipcode']);//
-// //   $graduate=mysqli_real_escape_string($con,$_POST['graduate']);//
-// //   $position=mysqli_real_escape_string($con,$_POST['position']);//
-// //   $branchid=mysqli_real_escape_string($con,$_POST['branchid']);// 12
-// //
-// //   $sql="INSERT INTO staff(firstname, lastname,cardno,birthday,gender,tel,address,province,zipcode,graduate,position,branchid,status) VALUES
-// //   ('$firstname', '$lastname','$cardno','$birthday','$gender','$tel','$address','$province','$zipcode','$graduate','$position','$branchid','notconfirm')";
-// //
-// //   if (!mysqli_query($con,$sql)) {
-// //       echo('Error na: ' . mysqli_error($con));
-// //       echo "<script>setTimeout(\"location.href = 'staffregister.php';\",1500);</script>";
-// //   }
-// //
-// //   if (mysqli_query($con,$sql)){
-// //     $_SESSION['firstname'] = $firstname;
-// //     $_SESSION['lastname'] = $lastname;
-// //     mysqli_close($con);
-// //     header("Location: staffrecive.php");
-// //     exit;
-// //   }
-// //   mysqli_close($con);
-// // }
+  // เพิ่ม schedule
+  $sql="INSERT INTO `schedule` (`scheduleid`, `sectionid`, `classid`, `openday`, `closeday`, `day`) VALUES
+  (NULL, '$q_sectionid', '$q_classid', '$openday', '$closeday', '$day')";
+
+  if (!mysqli_query($con,$sql)) {
+      echo('error : insert schedule ' . mysqli_error($con));
+      echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+  }else echo "เพิ่มลงไปใน schedule เรียบร้อยแล้ว ";
+}
 
 
 ?>
