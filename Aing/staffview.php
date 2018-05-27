@@ -151,7 +151,7 @@ h2{
                     <th>Time</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="color:#4B4D4A;">
                 <tr>
                     <td>John</td>
                     <td>Doe</td>
