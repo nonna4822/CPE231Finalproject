@@ -93,6 +93,12 @@ h2{
         .table-bordered {
             width: 100%;
         }
+        .gg td, .gg th , .gg tr,
+        .table-bordered thead td, .table-bordered thead th{
+            border:4px solid white; 
+           
+            
+        }
     </style>
 </head>
 
@@ -120,7 +126,7 @@ h2{
                                 <strong> Hi, Username</strong>
                             </a>
                             <a href="#" class="button1" style="width:250px">
-                                <strong> Enrollment</strong>
+                                <strong> ลงทะเบียนการสอน</strong>
                             </a>
                             <a href="#" class="button1" style="width:250px">
                                 <strong> Edit Profile</strong>
@@ -133,14 +139,16 @@ h2{
         </div>
     </div>
 
-    <div class="container-fluid" style="background-color:rgba(185, 245, 252,0.6);">
-        <h2><strong>Enrollment Table</strong></h2>
-        <table class="table table-bordered" style="font-size:35px; text-align:center; border:1px solid black;">
+    <div class="container-fluid" style="background-image:linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
+        <h2><strong>ตารางแสดงรายละเอียดการสอน</strong></h2>
+        <table class="table table-bordered gg" style="font-size:35px; text-align:center;">
             <thead>
-                <tr>
-                    <th>Subject ID</th>
+                <tr style="color:#6E038E;font-size:40px;">
+                    <th>Class Number</th>
+                    <th>Branch Name</th>
+                    <th>Section Name</th>
                     <th>Subject Title</th>
-                    <th>Status</th>
+                    <th>Time</th>
                 </tr>
             </thead>
             <tbody>
@@ -148,16 +156,15 @@ h2{
                     <td>John</td>
                     <td>Doe</td>
                     <td>john@example.com</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
                 </tr>
                 <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
                 </tr>
             </tbody>
         </table>
