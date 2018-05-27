@@ -19,8 +19,8 @@ $shift = mysqli_real_escape_string($con,$_POST['shift']);
 $sql= "SELECT sectionid FROM section WHERE sectionname='$sectionname' AND subjectid = '$subjectid' AND branchid = '$branchid'";
 
 if (!mysqli_query($con,$sql)) {
-    echo('Error: ' . mysqli_error($con));
-    echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+    echo('error : sql section table ' . mysqli_error($con));
+    // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }
 
 $result = mysqli_query($con, $sql);
@@ -35,23 +35,23 @@ if($row_1['sectionid'] != NULL){ //แสดงว่ามีอยู่แล
 }
 
 // *********** check class exist ? in class table ***************
-$sql= "SELECT classid FROM class WHERE branchid='$branchid' AND classid = '$classid";
+$sql= "SELECT classid FROM class WHERE branchid='$branchid' AND classid = '$classid'";
 
 if (!mysqli_query($con,$sql)) {
-    echo('Error: ' . mysqli_error($con));
-    echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
+    echo('Error: class table' . mysqli_error($con));
+    // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }
 
 $result = mysqli_query($con, $sql);
 $row_2 = mysqli_fetch_assoc($result);
 
 if($row_2['classid'] != NULL){ //มีห้องนี้อยู่จริง
-  echo "พบห้องเรียน จะตรวจสอบว่าว่างหรือไม่ ?";
+  echo "พบห้องเรียน จะตรวจสอบว่าว่างหรือไม่ในขั้นตอนต่อไป";
   // echo "<script>setTimeout(\"location.href = 'addsection.html';\",1500);</script>";
 }else {
   echo "ไม่พบห้องนี้ในระบบ ท่านจำเป็นต้องกรอกห้องใหม่เพิ่มเข้าไปในสาขา ต้องการเพิ่มตอนนี้เลยหรือไม่ ? "."<br  />";
-  echo "<button type=\"button\" onclick=\"location.href='addclass.html'\"> Yes </button>"
-  echo "<button type=\"button\" onclick=\"location.href='addsection.html'\"> Iqnore </button>"
+  echo "<button type=\"button\" onclick=\"location.href='addclass.html'\"> Yes </button>";
+  echo "<button type=\"button\" onclick=\"location.href='addsection.html'\"> Iqnore </button>";
   mysqli_close($con);
 }
 
@@ -60,8 +60,8 @@ $sql = "SELECT s.sectionid FROM section s LEFT join schedule sc on sc.sectionid 
 WHERE s.shift = '$shift' AND sc.classid = '$classid' ";
 
 if (!mysqli_query($con,$sql)) {
-    echo('Error: ' . mysqli_error($con));
-    echo "<script>setTimeout(\"location.href = 'staffregister.php';\",3000);</script>";
+    echo('Error: section table' . mysqli_error($con));
+    // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }
 
 $result = mysqli_query($con, $sql);
