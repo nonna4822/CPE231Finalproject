@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Enrollment Form</title>
+    <title>Teaching Form</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -102,6 +102,7 @@
             height: calc(3.65rem + 1px);
             width: 100%;
         }
+
     </style>
 </head>
 
@@ -141,14 +142,14 @@
 
     <div class="container-fluid" style="background-image:linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
         <h2>
-            <strong>Enrollment Form</strong>
+            <strong>ลงทะเบียนการสอน</strong>
         </h2>
         <div class="container-fluid" style="font-size:30px; text-align:center;">
-            <div class="row">
+            <div class="row" text-align="center">
                 <form action="student.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="FirstName">Student ID</label>
+                            <label for="FirstName">Staff ID</label>
                             <input type="int" class="form-control" id="Student ID" placeholder=" Enter Student ID" name="studentid">
                         </div>
                         <div class="form-group col-md-6">
@@ -174,50 +175,25 @@
                                 <option value="2">Term 2</option>
                             </select>
                         </div>
+
                         <div class="form-group col-md-6">
-                            <label for="paymenttype">Payment Type</label>
-                            <select name="paymenttype" class="form-control" style="width:100%;">
-                                <option value="cash">Cash</option>
-                                <option value="transfer">Transfer</option>
+                            <label for="sectionname">Section Name</label>
+                            <select name="sectionname" class="form-control" style="width:100%;">
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="c">C</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="timepayment">Time Payment</label>
-                            <input type="time" class="form-control" id="timepayment" name="timepayment">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="datepayment">Date Payment</label>
-                            <input type="date" class="form-control" id="datepayment" name="datepayment">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="subjecttitle">Subject Title</label>
-                            <select name="subjecttitle" class="form-control">
-                                <option value="101">ช่างยนต์</option>
-                                <option value="102">ของหวาน</option>
-                                <option value="103">ช่างไฟ</option>
-                                <option value="104">ช่างแอร์</option>
-                                <option value="105">ช่างเครื่องเสียง</option>
-                                <option value="106">นวดไทย</option>
-                                <option value="107">ภาษาอังกฤษ</option>
-                                <option value="108">แต่งหน้า แต่งเล็บ</option>
-                                <option value="109">ช่างผมชาย</option>
-                                <option value="110">อาหารไทย</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="studytime">Study Time</label>
-                            <select name="studytime" class="form-control">
-                                <option value="morning">9.00-12.00</option>
-                                <option value="afternoon">13.00-16.00</option>
-                                <option value="night">17.00-20.00</option>
-                            </select>
-                        </div>
+
                         <div style="width:100% ">
                             <input type="submit" value="submit" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;">
                         </div>
                     </div>
+
+
                 </form>
             </div>
+
         </div>
     </div>
 
