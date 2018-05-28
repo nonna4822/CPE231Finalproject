@@ -155,17 +155,17 @@
                         <div class="form-group col-md-6">
                             <label for="BranchName">Branch Name</label>
                             <select name="branchname" class="form-control" style="width:100%;">
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
-                                <option value="กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ">กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ</option>
+                                <option value="Bangkok Training School (Din Daeng 1)">Bangkok Training School (Din Daeng 1)</option>
+                                <option value="Bangkok Training School (Din Daeng 2)">Bangkok Training School (Din Daeng 2)</option>
+                                <option value="Bangkok Training School (Khlong Toei)">Bangkok Training School (Khlong Toei)</option>
+                                <option value="Bangkok Training School (Bon Kai)">Bangkok Training School (Bon Kai)</option>
+                                <option value="Bangkok Training School (Nong Jok)">Bangkok Training School (Nong Jok)</option>
+                                <option value="Bangkok Training School (Bang Rak)">Bangkok Training School (Bang Rak)</option>
+                                <option value="Bangkok Training School (Luang Por Taweesak)">Bangkok Training School (Luang Por Taweesak)</option>
+                                <option value="Bangkok Training School (Kanchana Singh)">Bangkok Training School (Kanchana Singh)</option>
+                                <option value="Bangkok Training School (Mouan Bumrungsin)">Bangkok Training School (Mouan Bumrungsin)</option>
+                                <option value="Bangkok Training School (Arthon)">Bangkok Training School (Arthon)</option>
+                                <option value="Career Education">Career Education</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
@@ -193,16 +193,16 @@
                         <div class="form-group col-md-6">
                             <label for="subjecttitle">Subject Title</label>
                             <select name="subjecttitle" class="form-control">
-                                <option value="101">ช่างยนต์</option>
-                                <option value="102">ของหวาน</option>
-                                <option value="103">ช่างไฟ</option>
-                                <option value="104">ช่างแอร์</option>
-                                <option value="105">ช่างเครื่องเสียง</option>
-                                <option value="106">นวดไทย</option>
-                                <option value="107">ภาษาอังกฤษ</option>
-                                <option value="108">แต่งหน้า แต่งเล็บ</option>
-                                <option value="109">ช่างผมชาย</option>
-                                <option value="110">อาหารไทย</option>
+                                <option value="1">Automotive</option>
+                                <option value="2">Dessert Making Skills</option>
+                                <option value="3">Electrician</option>
+                                <option value="4">Air Conditioning Technician</option>
+                                <option value="5">Sound Engineer</option>
+                                <option value="6">Thai massage</option>
+                                <option value="7">English Skill</option>
+                                <option value="8">Makeup Skill</option>
+                                <option value="9">Hair dresser</option>
+                                <option value="10">Cooking skill</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
