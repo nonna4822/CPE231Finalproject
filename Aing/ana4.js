@@ -1,30 +1,30 @@
 $(document).ready(function () {
     $.ajax({
-        url: location.protocol + '//' + location.host + "/project2/analysis3-1.php",
+        url: location.protocol + '//' + location.host + "/project2/analysis4.php",
         method: "GET",
         success: function (data) {
             console.log(data);
-            var CountStaff = [];
+            var Total_Student = [];
             var Male = [];
             var Female = [];
-            var branchname = [];
+            var subjecttitle  = [];
 
             for (var i in data) {
-                CountStaff.push(data[i].CountStaff);
+                Total_Student.push(data[i].Total_Student);
                 Male.push(data[i].Male);
                 Female.push(data[i].Female);
-                branchname.push(data[i].branchname);
+                subjecttitle .push(data[i].subjecttitle );
             }
 
             var chartdata = {
-                labels: branchname,
+                labels: subjecttitle,
                 datasets: [{
                     label: 'Number of Staff Register',
                     backgroundColor: 'rgba(30, 73, 119,0.3)',
                     borderColor: 'rgb(153, 204, 255)',
                     hoverBackgroundColor: 'rgb(0, 153, 153)',
                     hoverBorderColor: 'rgba(195,132, 221, 1)',
-                    data: CountStaff
+                    data: Total_Student
                 }, {
                     label: 'Male Staff',
                     backgroundColor: 'rgba(0, 77, 128,0.1)',
@@ -42,7 +42,7 @@ $(document).ready(function () {
                 }]
             };
 
-            var ctx = $("#mycanvas3-1");
+            var ctx = $("#mycanvas4");
 
             var barGraph = new Chart(ctx, {
                 type: 'horizontalBar',

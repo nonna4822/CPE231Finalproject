@@ -68,18 +68,6 @@
     </div>
     <center>
         <div class="col-md-12 spring-warmth-gradient">
-            <div class="title-block" style="color:#1e4977;">
-                <h2>Number of Staff Register each branch</h2>
-            </div>
-            <div id="chart-container">
-                <canvas id="mycanvas3"></canvas>
-            </div>
-            <!-- javascript -->
-            <script type="text/javascript" src="jquery.min.js"></script>
-            <script type="text/javascript" src="Chart.min.js"></script>
-            <script type="text/javascript" src="ana3.js"></script>
-        </div>
-        <div class="col-md-12 spring-warmth-gradient">
             <div class="title-block">
                 <h2>Number of Teacher each section</h2>
             </div>
@@ -93,7 +81,7 @@
         </div>
 
         <div class="col-md-12 spring-warmth-gradient" >
-            <div class="title-block" style="margin-top:30px;">
+            <div class="title-block" >
                 <h2>Number of section each branch</h2>
             </div>
             <div id="chart-container">
@@ -104,6 +92,98 @@
             <script type="text/javascript" src="Chart.min.js"></script>
             <script type="text/javascript" src="ana1.js"></script>
         </div>
+
+        <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Staff Register each branch each gender</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas3-1"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana3-1.js"></script>
+        </div>
+        
+        <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Student Enrollment each subject each gender</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas4"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana4.js"></script>
+        </div>
+        
+        <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Class each Branch</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas5"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana5.js"></script>
+        </div>
+        
+        <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Class each Branch</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas6"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana6.js"></script>
+        </div>
+        
+        <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Teacher each Branch</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas7"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana7.js"></script>
+        </div>
+        
+        <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Teacher who use class</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas8"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana8.js"></script>
+        </div>
+
+          <div class="col-md-12 spring-warmth-gradient">
+			<div class="title-block">
+				<h2>Number of Teacher who use class</h2>
+			</div>
+			<div id="chart-container">
+				<canvas id="mycanvas9"></canvas>
+			</div>
+			<!-- javascript -->
+			<script type="text/javascript" src="jquery.min.js"></script>
+			<script type="text/javascript" src="Chart.min.js"></script>
+			<script type="text/javascript" src="ana9.js"></script>
+        </div>
+        
     </center>
 
 </body>
