@@ -1,12 +1,12 @@
 <?php
-
-if(isset($_SESSION['firstname'])){
-  $firstname = $_SESSION['firstname'];
-  $lastname = $_SESSION['lastname'];
-} else {
-  echo "ไม่ได้อยู่ในระบบ";
-  echo "<script>setTimeout(\"location.href = 'login.html';\",3000);</script>";
-}
+  session_start();
+  if(isset($_SESSION['firstname'])){
+    $firstname = $_SESSION['firstname'];
+    $lastname = $_SESSION['lastname'];
+  } else {
+    echo "ไม่ได้อยู่ในระบบ";
+    echo "<script>setTimeout(\"location.href = 'login.html';\",3000);</script>";
+  }
 //connect
 include 'connect.php';
 
@@ -34,7 +34,7 @@ $row_1 = mysqli_fetch_assoc($result);
 
 if($row_1['sectionid'] != NULL){ //แสดงว่าลงซ้ำเซคชั่น
   mysqli_close($con);
-  echo "มี Section นี้ในระบบแล้ว กรุณาอย่ากรอกซ้ำ";
+  echo "มี Section นี้ในระบบแล้ว กรุณาอย่ากรอกซ้ำ" . "<br/>";
   echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }else {
 
@@ -53,7 +53,7 @@ if($row_1['sectionid'] != NULL){ //แสดงว่าลงซ้ำเซค
   if (!mysqli_query($con,$sql)) {
       echo('error : insert section ' . mysqli_error($con));
       echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
-  }else echo "เพิ่ม Section สำเร็จ";
+  }else echo "เพิ่ม Section สำเร็จ"."<br/>";
 }
 
 
@@ -81,7 +81,7 @@ $result = mysqli_query($con, $sql);
 $row_2 = mysqli_fetch_assoc($result);
 
 if($row_2['classid'] != NULL){ //มีห้องนี้อยู่จริง
-  echo "พบห้องเรียน จะตรวจสอบว่าว่างหรือไม่ในขั้นตอนต่อไป";
+  echo "พบห้องเรียน จะตรวจสอบว่าว่างหรือไม่ในขั้นตอนต่อไป"."<br/>";
   // echo "<script>setTimeout(\"location.href = 'addsection.html';\",1500);</script>";
 }else {
   // ไม่มีก็เพิ่มห้องเข้าไป
@@ -90,7 +90,7 @@ if($row_2['classid'] != NULL){ //มีห้องนี้อยู่จร�
   if (!mysqli_query($con,$sql)) {
       echo('error : insert class ' . mysqli_error($con));
       // echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
-  }else echo "เพิ่มห้องเข้าไปเรียบร้อย";
+  }else echo "เพิ่มห้องเข้าไปเรียบร้อย"."<br/>";
 }
 
 //หยิบ classid ออกมาเตรียมไปใช้
@@ -119,7 +119,7 @@ $result = mysqli_query($con, $sql);
 $row_3 = mysqli_fetch_assoc($result);
 
 if($row_3['sectionid'] != NULL){ //แสดงว่ามีอยู่แล้ว
-  echo "ห้องที่จะใช้นี้ ถูกเลือกไว้ใน Schedule อื่นแล้ว ( เต็มนั่นเอง ) กรุณาเลือกห้องใหม่ ";
+  echo "ห้องที่จะใช้นี้ ถูกเลือกไว้ใน Schedule อื่นแล้ว ( เต็มนั่นเอง ) กรุณาเลือกห้องใหม่ "."<br/>";
   echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
 }else {
 
@@ -130,8 +130,7 @@ if($row_3['sectionid'] != NULL){ //แสดงว่ามีอยู่แล
   if (!mysqli_query($con,$sql)) {
       echo('error : insert schedule ' . mysqli_error($con));
       echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
-  }else echo "เพิ่มลงไปใน schedule เรียบร้อยแล้ว ";
+  }else echo "เพิ่มลงไปใน schedule เรียบร้อยแล้ว "."<br/>";
 }
-
 
 ?>

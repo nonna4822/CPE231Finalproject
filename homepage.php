@@ -272,7 +272,7 @@
                             <img src="picture/question (1).png" alt="" width="30%">
                         </div>
                         <div class="form-group">
-                            <a href="#" class="button" style="width:50%">
+                            <a href="FAQ.php" class="button" style="width:50%">
                                 <img src="picture/123376.png" alt="" width="20%"> view more
                             </a>
                         </div>

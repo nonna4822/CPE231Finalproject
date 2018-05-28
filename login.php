@@ -11,7 +11,7 @@ $cardno = mysqli_real_escape_string($con,$_POST['cardno']);
 $tel =  mysqli_real_escape_string($con,$_POST['tel']);
 $choice = mysqli_real_escape_string($con,$_POST['choice']);
 $_SESSION['choice'] = $choice;
-// $_SESSION['cardno'] = $cardno;
+$_SESSION['cardno'] = $cardno;
 
 // Check connection
 if (!$con) {
@@ -38,7 +38,7 @@ if($choice == 'student'){
     }
 
   } else {
-  $sql = "SELECT firstname , lastname FROM staff WHERE cardno = '$cardno' AND tel = '$tel'";
+  $sql = "SELECT firstname , lastname , cardno FROM staff WHERE cardno = '$cardno' AND tel = '$tel'";
   $result = mysqli_query($con, $sql);
   $row = mysqli_fetch_assoc($result);
 
@@ -46,12 +46,12 @@ if($choice == 'student'){
     echo "เลขบัตรประชาชน หรือ เบอร์โทรศัพท์ ไม่ถูกต้อง !";
     echo "<script>setTimeout(\"location.href = 'login.html';\",1500);</script>";
   }else {
-    $_SESSION['cardno'] = $cardno;
+    $_SESSION['cardno'] = $row['cardno'];
     $_SESSION['tel'] = $tel;
     $_SESSION['firstname'] = $row['firstname'];
     $_SESSION['lastname'] = $row['lastname'];
 
-    if( substr( $cardno, 0, 5 ) === "admin"){
+    if( substr( $row['cardno'], 0, 5 ) === "admin"){
       header("Location: adminview.php"); //go to student view
       exit;
     }else {
