@@ -173,7 +173,7 @@
 
           <div class="col-md-12 spring-warmth-gradient">
 			<div class="title-block">
-				<h2>Number of Teacher who use class</h2>
+				<h2>Number of Student with success/not_success enrollment each subject</h2>
 			</div>
 			<div id="chart-container">
 				<canvas id="mycanvas9"></canvas>
