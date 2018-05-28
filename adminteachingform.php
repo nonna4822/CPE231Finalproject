@@ -256,7 +256,7 @@
      </select>
  </div>
 
- <button type="button" name="button" onclick="showsection()"> ค้นหา </button>
+ <button type="button" name="button" onclick="showteaching()"> ค้นหา </button>
 
 </form>
 
@@ -279,7 +279,7 @@ function param2(str){
   subjectid = str;
 }
 
-function showsection() {
+function showteaching() {
    if (branchid =="" || subjectid =="") {
        document.getElementById("txtHint").innerHTML = "";
        return;
@@ -290,19 +290,19 @@ function showsection() {
                document.getElementById("txtHint").innerHTML = this.responseText;
            }
        };
-       xmlhttp.open("GET","teachingajax.php?p1="+branchid+"&p2="+subjectid+"\"",true);
+       xmlhttp.open("GET","adminteachingajax.php?p1="+branchid+"&p2="+subjectid+"\"",true);
        xmlhttp.send();
    }
 }
 
-  function regissection(sectionid) {
+  function confirm(teachingid) {
           xmlhttp = new XMLHttpRequest();
           xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
               document.getElementById("sectionid").innerHTML = this.responseText;
           }
       };
-      xmlhttp.open("GET","teachinginsertajax.php?sectionid="+sectionid+"&cardno="+<?php echo $cardno ?>,true);
+      xmlhttp.open("GET","adminconfirmstaff.php?teachingid="+teachingid,true);
       xmlhttp.send();
   }
 

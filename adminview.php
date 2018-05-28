@@ -31,6 +31,6 @@
 
     <button type="button" >Enroll request </button>
 
-    <button type="button" >Register request </button>
+    <button type="button" onclick="location.href='adminteachingform.php'">Register Teaching request </button>
   </body>
 </html>
