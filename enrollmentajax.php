@@ -36,7 +36,7 @@
         echo "<td>" . $row['subjecttitle'] . "</td>";
         echo "<td>" . $row['shift'] . "</td>";
         echo "<td>" . $row['branchname'] . "</td>";
-        echo "<td>" . "<button type=\"button\" name=\"button\" onclick=\"regissection(".$row['sectionid'].")\">"."Register".
+        echo "<td>" . "<button type=\"button\" name=\"button\" onclick=\"regissection(".$row['sectionid'].")\">"."Enroll".
         "</button>\" ". "</td>";
         echo "</tr>";
     }

@@ -130,7 +130,10 @@ if($row_3['sectionid'] != NULL){ //แสดงว่ามีอยู่แล
   if (!mysqli_query($con,$sql)) {
       echo('error : insert schedule ' . mysqli_error($con));
       echo "<script>setTimeout(\"location.href = 'addsection.html';\",3000);</script>";
-  }else echo "เพิ่มลงไปใน schedule เรียบร้อยแล้ว "."<br/>";
+  }else {
+    echo "เพิ่มลงไปใน schedule เรียบร้อยแล้ว "."<br/>";
+    echo "<script>setTimeout(\"location.href = 'adminview.php';\",3000);</script>";
+  }
 }
 
 ?>

@@ -15,22 +15,106 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-  </head>
-  <body>
-    <h1>Admin View</h1>
+    <style media="screen">
+        table {
+            width: 60%;
+            border-collapse: collapse;
+        }
 
-    <button type="button" onclick="location.href='homepage.php'"> homepage </button>
+        table, td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
 
-    <button type="button" onclick="location.href='addsection.html'" >Add sections </button>
+        th {
+          text-align: left;
+          background-color: yellow;
+        }
 
-    <button type="button" onclick="location.href='addsection.html'" >delete subject </button>
+        button.green {
+          background-color: #4CAF50;
+           border: none;
+           color: white;
+           /* padding: 15px 32px; */
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           font-size: 16px;
+           /* margin: 4px 2px; */
+           cursor: pointer;
+        }
 
-    <button type="button" >Add branch </button>
+        button.orange {
+          background-color: orange;
+           border: none;
+           color: white;
+           /* padding: 15px 32px; */
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           font-size: 16px;
+           /* margin: 4px 2px; */
+           cursor: pointer;
+        }
 
-    <button type="button" >Delete branch </button>
+      </style>
+    </head>
+    <body>
+      <center>
+        <h1>Admin View</h1>
 
-    <button type="button" >Enroll request </button>
+        <button type="button" onclick="location.href='homepage.php'"> homepage </button>
 
-    <button type="button" onclick="location.href='adminteachingform.php'">Register Teaching request </button>
+        <button type="button" onclick="location.href='addsection.html'" >Add sections </button>
+
+        <button type="button" onclick="location.href='addsection.html'" >delete subject </button>
+
+        <button type="button" >Add branch </button>
+
+        <button type="button" >Delete branch </button>
+
+        <button type="button" class="orange">Enroll request </button>
+
+        <button class="green" type="button" onclick="location.href='adminteachingform.php'">Register Teaching request </button>
+
+        <div id="txtHint"><b>text</b></div>
+
+        <div id="end"><b>text</b></div>
+      </center>
+
+
+
+    <script type="text/javascript">
+
+    document.getElementById("txtHint").innerHTML = "test";
+
+    showsectionblank();
+
+    function showsectionblank() {
+           xmlhttp = new XMLHttpRequest();
+           xmlhttp.onreadystatechange = function() {
+               if (this.readyState == 4 && this.status == 200) {
+                   document.getElementById("txtHint").innerHTML = this.responseText;
+               }
+           };
+           xmlhttp.open("GET","showsectionblank.php?",true);
+           xmlhttp.send();
+    }
+
+    // function delete(sectionid) {
+    //        xmlhttp = new XMLHttpRequest();
+    //        xmlhttp.onreadystatechange = function() {
+    //          if (this.readyState == 4 && this.status == 200) {
+    //            document.getElementById("end").innerHTML = this.responseText;
+    //          }
+    //        };
+    //        xmlhttp.open("GET", "deletesection.php="+sectionid, true);
+    //        xmlhttp.send();
+    // }
+
+    </script>
+
   </body>
+
+
 </html>

@@ -6,6 +6,8 @@
 <!-- import font to html -->
 <link rel="stylesheet" type="text/css" href="font.css">
 
+<script type="text/javascript" src="https://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+
 <!--  -->
 
 <!-- script -->
