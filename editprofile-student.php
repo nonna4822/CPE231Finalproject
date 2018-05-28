@@ -167,7 +167,7 @@ if($row['cardno'] == NULL){
 
                         <div class="col-sm-12" style="color:white; font-size:35px; text-align:right;">
                             <div class="form-group">
-                                <a href='staffview.php' class="button1" style="width:250px">
+                                <a href='studentview.php' class="button1" style="width:250px">
                                     <strong>
                                         <?php echo $firstname." ".$lastname ?>
                                     </strong>

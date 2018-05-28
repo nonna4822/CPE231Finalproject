@@ -190,17 +190,6 @@ h2{
            "</tr>";
            return;
        } else {
-         document.getElementById("rowajax").innerHTML = "<tr>"+
-         "<td>test2</td>" +
-         "<td>test2</td>" +
-         "<td>test2</td>" +
-         "<td>test2</td>" +
-         "<td>test2</td>" +
-       "</tr>";
-       }
-
-
-       {
                xmlhttp = new XMLHttpRequest();
                xmlhttp.onreadystatechange = function() {
                if (this.readyState == 4 && this.status == 200) {

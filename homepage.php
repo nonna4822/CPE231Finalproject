@@ -157,36 +157,64 @@
         echo "  <div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
         <div class=\"form-group\">
             <a href='logout.php' class=\"button1\" style=\"width:40%\">
-                <img src=\"picture/login (1).png\" alt=\"\" width=\"30%\">
+                <img src=\"picture/user.png\" alt=\"\" width=\"30%\">
                 <strong> Log out</strong>
             </a>
         </div>
     </div>";
   }else if(isset($_SESSION['firstname']) && $_SESSION['choice'] =='staff'){
-    echo "<div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
-    <div class=\"form-group\">
-        <div class=\"dropdown\">
-            <a href=\"#\" class=\"button1\" style=\"width:70%\">
-                <img src=\"picture/user.png\" alt=\"\" width=\"20%\">
-                <button onclick =\"location.href='staffview.php'\"onmouseover=\"myFunction()\" class=\"dropbtn\">".$_SESSION['firstname']." ".$_SESSION['lastname']."</button>
-                <div id=\"myDropdown\" class=\"dropdown-content\">
-                    <a href='teachingform.php'>Teachingform</a>
-                    <a href='editprofile-staff.php'>Edit Profile</a>
-                </div>
+    if(substr( $_SESSION['cardno'], 0, 5 ) === "admin"){
 
-            </a>
+        echo "<div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
+        <div class=\"form-group\">
+            <div class=\"dropdown\">
+                <a href=\"#\" class=\"button1\" style=\"width:70%\">
+                    <img src=\"picture/user.png\" alt=\"\" width=\"20%\">
+                    <button onclick =\"location.href='adminview.php'\"onmouseover=\"myFunction()\" class=\"dropbtn\">".$_SESSION['firstname']." ".$_SESSION['lastname']."</button>
+                    <div id=\"myDropdown\" class=\"dropdown-content\">
+                        <a href='adminview.php'>AdminView</a>
+                    </div>
 
+                </a>
+
+            </div>
         </div>
-    </div>
-</div>";
-    echo "  <div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
-    <div class=\"form-group\">
-        <a href='logout.php' class=\"button1\" style=\"width:40%\">
-            <img src=\"picture/login (1).png\" alt=\"\" width=\"30%\">
-            <strong> Log out</strong>
-        </a>
-    </div>
-</div>";
+    </div>";
+        echo "  <div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
+        <div class=\"form-group\">
+            <a href='logout.php' class=\"button1\" style=\"width:40%\">
+                <img src=\"picture/user.png\" alt=\"\" width=\"30%\">
+                <strong> Log out</strong>
+            </a>
+        </div>
+    </div>";
+    }else {
+      echo "<div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
+      <div class=\"form-group\">
+          <div class=\"dropdown\">
+              <a href=\"#\" class=\"button1\" style=\"width:70%\">
+                  <img src=\"picture/user.png\" alt=\"\" width=\"20%\">
+                  <button onclick =\"location.href='staffview.php'\"onmouseover=\"myFunction()\" class=\"dropbtn\">".$_SESSION['firstname']." ".$_SESSION['lastname']."</button>
+                  <div id=\"myDropdown\" class=\"dropdown-content\">
+                      <a href='teachingform.php'>Teachingform</a>
+                      <a href='editprofile-staff.php'>Edit Profile</a>
+                  </div>
+
+              </a>
+
+          </div>
+      </div>
+  </div>";
+      echo "  <div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
+      <div class=\"form-group\">
+          <a href='logout.php' class=\"button1\" style=\"width:40%\">
+              <img src=\"picture/login (1).png\" alt=\"\" width=\"30%\">
+              <strong> Log out</strong>
+          </a>
+      </div>
+  </div>";
+    }
+
   }else{
         echo "<div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
         <div class=\"form-group\">
