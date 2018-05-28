@@ -2,7 +2,7 @@
 
 <?php
 echo "เลขบัตรประชาชน หรือ เบอร์โทรศัพท์ ไม่ถูกต้อง !";
-echo "<script>setTimeout(\"location.href = 'login.html';\",1500);</script>";
+echo "<script>setTimeout(\"location.href = 'login.html';\",3000);</script>";
 ?>
 
 <!-- check starter text -->

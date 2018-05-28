@@ -15,7 +15,7 @@
     <style>
         * {
             font-family: 'Waffle Regular';
-            
+
 
         }
 
@@ -96,9 +96,9 @@ h2{
         }
         .gg td, .gg th , .gg tr,
         .table-bordered thead td, .table-bordered thead th{
-            border:4px solid white; 
-           
-            
+            border:4px solid white;
+
+
         }
     </style>
 </head>
@@ -110,12 +110,21 @@ h2{
                 <div class="col">
                     <div class="col-sm-5" style="color:white; font-size:35px; text-align:center;margin-left:800px;">
                         <div class="form-group">
+<<<<<<< HEAD
+                            <a href="#" class="button1" style="width:250px">
+                                <img src="../picture/house.png" alt="" width="30px">
+                                <strong> Home</strong>
+                            </a>
+                            <a href="#" class="button1" style="width:250px">
+                                <img src="../picture/login (1).png" alt="" width="40px">
+=======
                             <a href='homepage.php' class="button1" style="width:250px">
                                 <img src="../webpage/house.png" alt="" width="30px">
                                 <strong> Home</strong>
                             </a>
                             <a href='logout.php' class="button1" style="width:250px">
                                 <img src="../pictures/login (1).png" alt="" width="40px">
+>>>>>>> c88836006743ce89539d8d55b2f9457203922435
                                 <strong> Log out</strong>
                             </a>
                         </div>
@@ -169,7 +178,7 @@ h2{
             </tbody>
         </table>
     </div>
-    
+
 
 </body>
 

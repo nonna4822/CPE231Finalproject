@@ -42,13 +42,54 @@
             width: 50px;
             position: absolute;
             z-index: 999;
-            bottom: -90px;
+            bottom: -160px;
+        }
+
+        .button1 {
+            background-color: rgba(255, 255, 255, 0.3);
+            background-position: center;
+            border: none;
+            padding: 0px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+            font-family: 'Waffle Regular';
+            border-radius: 12px;
+            color: white;
+
+        }
+
+        .menubar {
+            background-color: #225A69;
+            /* padding: 15px; */
+            opacity: 0.85;
+            width: 100%;
+            color: white;
+            font-size: 30px;
+            text-align: right;
+
         }
     </style>
 </head>
 
 <body>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="menubar">
+                <div class="col">
+                    <div class="col-sm-5" style="color:white; font-size:35px; text-align:center;margin-left:800px;">
+                        <div class="form-group">
+                            <a href='homepage.php' class="button1" style="width:250px">
+                                <img src="picture/house.png" alt="" width="30px">
+                                <strong> Home</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class=picstyle>
         <img src="picture/more07.png" alt="" width=500px;>
     </div>
@@ -68,39 +109,39 @@
                 <form action="studentinsert.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="firstname">Firstname</label>
-                            <input type="text" class="form-control" id="firstname" placeholder="Enter your Firstname" name="firstname" required>
+                            <label for="FirstName">FirstName</label>
+                            <input type="text" class="form-control" id="FirstName" placeholder="FirstName" name="FirstName">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="lastname">Surname</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Enter your Lastname" name="lastname" required>
+                            <label for="LastName">LastName</label>
+                            <input type="text" class="form-control" id="LastName" placeholder="LastName" name="LastName">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="cardno">Cardinal Number</label>
-                            <input type="int" class="form-control" id="cardno" name="cardno" required>
+                            <label for="CardNo">CardNo</label>
+                            <input type="int" class="form-control" id="CardNo" placeholder="CardNo" name="CardNo">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="birthday<">Birthday</label>
-                            <input type="Date" class="form-control" id="birthday"  name="birthday" required>
+                            <label for="DateofBirth<">DateofBirth</label>
+                            <input type="Date" class="form-control" id="DateofBirth" placeholder="DateofBirth" name="DateofBirth">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="tel">Tel. phone</label>
-                            <input type="int" class="form-control" id="tel"  name="tel" required>
+                            <label for="Tel">Telephone-number</label>
+                            <input type="int" class="form-control" id="Tel" placeholder="Telephone-number" name="Tel">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="gender">Gender</label>
-                            <select name="gender" class="form-control">
+                            <label for="Gender">Gender</label>
+                            <select name="Gender" class="form-control">
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="address">Location</label>
-                            <input type="text" class="form-control" id="address" name="address" value = "58/8"required >
+                            <label for="Address">Address</label>
+                            <input type="text" class="form-control" id="Address" placeholder="Address" name="Address">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="province">Province</label>
-                            <select name="province" class="form-control">
+                            <label for="Province">Province</label>
+                            <select name="Province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>
                                 <option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -181,23 +222,23 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="zipcode">รหัสไปรษณีย์</label>
-                            <input type="int" class="form-control" id="zipcode" placeholder="10410" name="zipcode" value="73000" required>
+                            <label for="ZIPcode">ZIPcode</label>
+                            <input type="int" class="form-control" id="Tel" placeholder="ZIPcode" name="ZIPcode">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="occupation">อาชีพ</label>
-                            <input type="text" class="form-control" id="occupation" placeholder="นักเรียนนักศึกษา " value="นักตกปลา"name="occupation" required>
+                            <label for="Occupation">Occupation</label>
+                            <input type="text" class="form-control" id="Occupation" placeholder="Occupation " name="Occupation">
                         </div>
 
                         <div style="width:100%">
-                            <input type="submit" value="submit" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;" required>
+                            <input type="submit" value="submit" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;">
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    </div>
+
 
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

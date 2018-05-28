@@ -1,26 +1,98 @@
+  <?php
+  session_start();
+  if(isset($_SESSION['firstname'])){
+    $firstname = $_SESSION['firstname'];
+    $lastname = $_SESSION['lastname'];
+    $cardno = $_SESSION['cardno'];
+  } else {
+    header("location : login.html");
+    exit;
+  }
+
+  //connect
+  include 'connect.php';
+
+  //query sql to find
+  $sql= "SELECT * FROM staff WHERE cardno='$cardno'";
+
+  if (!mysqli_query($con,$sql)) {
+      echo('Error: to find staff with cardno.' . mysqli_error($con));
+  }
+
+  $result = mysqli_query($con, $sql);
+  $row = mysqli_fetch_assoc($result);
+
+  if($row['cardno'] == NULL){
+    mysqli_close($con);
+    echo "ไม่พบผู้ใช้ในระบบ";
+  }else {
+    // echo $row['']
+    $birthday=$row['birthday'];
+    $gender=$row['gender'];
+    $tel = $row['tel'];
+    $address=$row['address'];
+    $province=$row['province'];
+    $zipcode=$row['zipcode'];
+    $graduate=$row['graduate'];
+
+  }
+   ?>
+  <!-- session_start();
+  if(isset($_SESSION['firstname'])){
+    $firstname = $_SESSION['firstname'];
+    $lastname = $_SESSION['lastname'];
+    $cardno = $_SESSION['cardno'];
+  } else {
+    header("location : login.html");
+    exit;
+  }
+
+
+  //connect
+  include 'connect.php';
+
+  //query sql to find
+  $sql= "SELECT cardno FROM staff WHERE cardno='$cardno'";
+
+  if (!mysqli_query($con,$sql)) {
+      echo('Error: to find staff with cardno.' . mysqli_error($con));
+  }
+
+  $result = mysqli_query($con, $sql);
+  $row = mysqli_fetch_assoc($result);
+
+  if($row['cardno'] == NULL){
+    mysqli_close($con);
+    echo "ไม่พบผู้ใช้ในระบบ";
+  }else {
+
+    $birthday=$row['birthday'];
+    $gender=$row['gender'];
+    $tel = $row['tel'];
+    $address=$row['address'];
+    $province=$row['province'];
+    $zipcode=$row['zipcode'];
+    $graduate=$row['graduate']; -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Staff Register</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
+    <title>Edit Staff Profile</title>
+    <script src="myscripts.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
 
     <style>
         * {
             font-family: 'Waffle Regular';
-        }
 
-        .element {
-            background-color: #119FA4;
-            /* padding: 15px; */
-            opacity: 0.85;
-            width: 100%;
-            color: white;
-            font-size: 50px;
-            text-align: left;
-            margin: 20px 0px;
+
         }
 
         .menubar {
@@ -34,15 +106,33 @@
 
         }
 
+        .element {
+            background-color: #119FA4;
+            /* padding: 15px; */
+            opacity: 0.85;
+            width: 100%;
+            color: white;
+            font-size: 50px;
+            text-align: left;
+            margin: 0px 0px;
+        }
+
         .element2 {
-            background-color: rgba(17, 159, 164, 0.36);
+            background-color: rgba(17, 159, 164, 0.60);
             /* padding: 15px; */
             width: 100%;
             color: white;
             font-size: 30px;
             text-align: center;
-            margin: 20px 0px;
-            padding: 10px 500px;
+            margin: 0px 0px;
+
+        }
+
+        .picstyle {
+            width: 50px;
+            position: absolute;
+            z-index: 999;
+            bottom: -160px;
         }
 
         .button1 {
@@ -60,70 +150,34 @@
 
         }
 
-        .form-control {
-            font-size: 25px !important;
+        h2 {
+            font-size: 50px;
+            color: navy;
         }
 
-        .picstyle {
-            width: 50px;
-            position: absolute;
-            z-index: 999;
-            bottom: -160px;
-            padding:0px 0px;
-        }
 
-        .text {
+        .btn-primary {
             font-size: 30px;
-            color: black;
-            position: absolute;
-            z-index: 999;
-            right: 204px;
-            top: 275px;
+            border-radius: 12px;
         }
 
-        .text1 {
-            font-size: 25px;
-            color: black;
-            position: absolute;
-            z-index: 999;
-            right: 10px;
-            top: 320px;
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
 
-        .text2 {
-            font-size: 25px;
-            color: black;
-            position: absolute;
-            z-index: 999;
-            right: 200px;
-            top: 340px;
-        }
-
-        .text3 {
-            font-size: 25px;
-            color: black;
-            position: absolute;
-            z-index: 999;
-            right: 95px;
-            top: 360px;
-        }
-
-        .text4 {
-            font-size: 25px;
-            color: black;
-            position: absolute;
-            z-index: 999;
-            right: 220px;
-            top: 380px;
-        }
-
-        .text5 {
-            font-size: 25px;
-            color: black;
-            position: absolute;
-            z-index: 999;
-            right: 265px;
-            top: 400px;
+        select.form-control:not([size]):not([multiple]) {
+            height: calc(3.65rem + 1px);
+            width: 100%;
         }
     </style>
 </head>
@@ -139,84 +193,67 @@
                                 <img src="picture/house.png" alt="" width="30px">
                                 <strong> Home</strong>
                             </a>
+                            <a href='logout.php' class="button1" style="width:250px">
+                                <img src="picture/login (1).png" alt="" width="40px">
+                                <strong> Log out</strong>
+                            </a>
                         </div>
+                    </div>
+
+                    <div class="col-sm-12" style="color:white; font-size:35px; text-align:right;">
+                        <div class="form-group">
+                            <a href='staffview.php' class="button1" style="width:250px">
+                                <strong> <?php echo $firstname." ".$lastname ?></strong>
+                            </a>
+                            <a href='teachingform.php' class="button1" style="width:250px">
+                                <strong> ลงทะเบียนการสอน</strong>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class=picstyle>
-        <img src="picture/OBDPS10.png" alt="" width=500px;>
-    </div>
-    <div class=text>
-        <p align="right">
-            <strong>*Qualifications of manager</strong>
-        </p>
-    </div>
-    <div class=text1>
-        <p>- More than 2-year experience in education and/or Management trainee </p>
-    </div>
-    <div class=text2>
-        <p>- Strong communication in English and Thai</p>
-    </div>
-    <div class=text3>
-        <p>- Organized,rational,initiative,team player and result oriented</p>
-    </div>
-    <div class=text4>
-        <p>- Strong leadership, people management </p>
-    </div>
-    <div class=text5>
-        <p>- Can be working under pressure </p>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="element">
-                <img src="picture/notepad.png" alt="" width="100px">
-                <span style="padding-left: 30px;">Staff Register</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="element2">
-                <form action="staffinsert.php" method="POST">
+    <div class="container-fluid" style="background-image:linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
+        <h2>
+            <strong>Edit Staff Profile</strong>
+        </h2>
+        <div class="container-fluid" style="font-size:30px; text-align:center;">
+            <div class="row">
+                <form action="updatestaff.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="FirstName">FirstName</label>
-                            <input type="text" class="form-control" id="FirstName" placeholder="FirstName" name="FirstName">
+                            <label for="firstname">FirstName</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="FirstName" name="firstname" value="<?php echo $firstname ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="LastName">LastName</label>
-                            <input type="text" class="form-control" id="LastName" placeholder="LastName" name="LastName">
+                            <label for="lastname">LastName</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="LastName" name="lastname" value="<?php echo $lastname ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="CardNo">CardNo</label>
-                            <input type="int" class="form-control" id="CardNo" placeholder="CardNo" name="CardNo">
+                            <label for="birthday<">DateofBirth</label>
+                            <input type="Date" class="form-control" id="birthday" placeholder="DateofBirth" name="birthday" value="<?php echo $birthday ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="DateofBirth<">DateofBirth</label>
-                            <input type="Date" class="form-control" id="DateofBirth" placeholder="DateofBirth" name="DateofBirth">
+                            <label for="tel">Telephone-number</label>
+                            <input type="int" class="form-control" id="tel" placeholder="Telephone-number" name="tel" value="<?php echo $tel; ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Tel">Telephone-number</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="Telephone-number" name="Tel">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="Gender">Gender</label>
-                            <select name="Gender" class="form-control">
+                            <label for="gender">Gender</label>
+                            <select name="gender" class="form-control" >
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Address">Address</label>
-                            <input type="text" class="form-control" id="Address" placeholder="Address" name="Address">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="address" name="address" value="<?php echo $address ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Province">Province</label>
-                            <select name="Province" class="form-control">
+                            <label for="province">Province</label>
+                            <select name="province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>
                                 <option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -297,61 +334,25 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="ZIPcode">ZIPcode</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="ZIPcode" name="ZIPcode">
+                            <label for="zipcode">ZIPcode</label>
+                            <input type="int" class="form-control" id="zipcode" placeholder="ZIPcode" name="zipcode" value="<?php echo $zipcode ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Graduate">Graduate</label>
-                            <input type="text" class="form-control" id="Graduate" placeholder="Graduate" name="Graduate">
+                            <label for="graduate">Graduate</label>
+                            <input type="text" class="form-control" id="graduate" placeholder="Graduate" name="graduate" value="<?php echo $graduate ?>">
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="BranchName">BranchName</label>
-                            <select name="BranchName" class="form-control">
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
-                                <option value="กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ">กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6 ">
-                            <label for="Position">Position</label>
-                            <select name="Position" class="form-control">
-                                <option value="Manager">Manager</option>
-                                <option value="Teacher">Teacher</option>
-                            </select>
 
-
-                        </div>
-                        <div class="form-check col-md-6" style="color:red ">
-                            <input type="checkbox" class="form-check-input" id="Accept">
-                            <label class="form-check-label" for="Accept">Accept</label>
-                        </div>
 
 
                         <div style="width:100%">
-                            <input type="submit" value="submit" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;">
+                            <input type="submit" value="Update" style="border-radius: 15px; width: 100px; border: 1px solid black; font-size: 25px;background-color: white;">
                         </div>
                     </div>
                 </form>
             </div>
+
+
         </div>
     </div>
 
-
-    <!-- script -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
 </body>
-
-</html>
