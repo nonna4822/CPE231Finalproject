@@ -1,6 +1,12 @@
 <?php
 
-session_start();
+if(isset($_SESSION['firstname'])){
+  $firstname = $_SESSION['firstname'];
+  $lastname = $_SESSION['lastname'];
+} else {
+  echo "ไม่ได้อยู่ในระบบ";
+  echo "<script>setTimeout(\"location.href = 'login.html';\",3000);</script>";
+}
 //connect
 include 'connect.php';
 
