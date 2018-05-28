@@ -3,6 +3,7 @@
 
 <head>
     <title>Staff Information</title>
+    <script src="myscripts.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -92,29 +93,38 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row">
             <div class="col">
                 <div class="menubar">
-                    <div class="col-sm-4" style="color:white; font-size:35px; text-align:center;margin-left:880px; ">
+                    <div class="col-sm-4" style="color:white; font-size:35px; text-align:center;margin-left:850px; ">
                         <div class="form-group">
-                            <a href="#" class="button1" style="width:30%">
+                            <a href='homepage.php' class="button1" style="width:30%">
                                 <img src="../webpage/house.png" alt="" width="30%">
                                 <strong> Home</strong>
                             </a>
-                            <a href="#" class="button1" style="width:30%">
-                                <img src="../pictures/login (1).png" alt="" width="30%">
-                                <strong> Log in</strong>
-                            </a>
-                            <a href="#" class="button1" style="width:30%">
-                                <img src="../pictures/phone.png" alt="" width="30%">
-                                <strong> Contact</strong>
-                            </a>
+                            <?php
+      if(isset($_SESSION['firstname']) ){
+        echo"
+        <a href='logout.php' class=\"button1\" style=\"width:30%\">
+        <img src=\"../pictures/login (1).png\" alt=\"\" width=\"30%\">
+        <strong> Log out</strong>
+    </a>";}
+    else {echo"<a href='login.html' class=\"button1\" style=\"width:30%\">
+        <img src=\"../pictures/login (1).png\" alt=\"\" width=\"30%\">
+        <strong> Log in</strong>
+    </a>";}
+                            ?>
+                                <a href="#" class="button1" style="width:30%">
+                                    <img src="../pictures/folder.png" alt="" width="20%">
+                                    <strong> ข้อมูลเชิงลึก</strong>
+                                </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
         <div class="row">

@@ -44,11 +44,52 @@
             z-index: 999;
             bottom: -160px;
         }
+
+        .button1 {
+            background-color: rgba(255, 255, 255, 0.3);
+            background-position: center;
+            border: none;
+            padding: 0px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+            font-family: 'Waffle Regular';
+            border-radius: 12px;
+            color: white;
+
+        }
+
+        .menubar {
+            background-color: #225A69;
+            /* padding: 15px; */
+            opacity: 0.85;
+            width: 100%;
+            color: white;
+            font-size: 30px;
+            text-align: right;
+
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="menubar">
+                <div class="col">
+                    <div class="col-sm-5" style="color:white; font-size:35px; text-align:center;margin-left:800px;">
+                        <div class="form-group">
+                            <a href='homepage.php' class="button1" style="width:250px">
+                                <img src="../webpage/house.png" alt="" width="30px">
+                                <strong> Home</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class=picstyle>
         <img src="../pictures/more07.png" alt="" width=500px;>
     </div>
@@ -197,7 +238,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

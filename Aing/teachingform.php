@@ -3,6 +3,7 @@
 
 <head>
     <title>Teaching Form</title>
+    <script src="myscripts.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -102,7 +103,6 @@
             height: calc(3.65rem + 1px);
             width: 100%;
         }
-
     </style>
 </head>
 
@@ -113,11 +113,11 @@
                 <div class="col">
                     <div class="col-sm-5" style="color:white; font-size:35px; text-align:center;margin-left:800px;">
                         <div class="form-group">
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='homepage.php' class="button1" style="width:250px">
                                 <img src="../webpage/house.png" alt="" width="30px">
                                 <strong> Home</strong>
                             </a>
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='logout.php' class="button1" style="width:250px">
                                 <img src="../pictures/login (1).png" alt="" width="40px">
                                 <strong> Log out</strong>
                             </a>
@@ -126,10 +126,10 @@
 
                     <div class="col-sm-12" style="color:white; font-size:35px; text-align:right;">
                         <div class="form-group">
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='staffview.php' class="button1" style="width:250px">
                                 <strong> Hi, Username</strong>
                             </a>
-                            <a href="#" class="button1" style="width:250px">
+                            <a href='editprofile-staff.php' class="button1" style="width:250px">
                                 <strong> Edit Profile</strong>
                             </a>
                         </div>
