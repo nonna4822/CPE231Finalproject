@@ -184,39 +184,39 @@
                 <form action="staffinsert.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="FirstName">FirstName</label>
-                            <input type="text" class="form-control" id="FirstName" placeholder="FirstName" name="FirstName">
+                            <label for="firstname">FirstName</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="FirstName" name="firstname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="LastName">LastName</label>
-                            <input type="text" class="form-control" id="LastName" placeholder="LastName" name="LastName">
+                            <label for="lastname">LastName</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="LastName" name="lastname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="CardNo">CardNo</label>
-                            <input type="int" class="form-control" id="CardNo" placeholder="CardNo" name="CardNo">
+                            <label for="cardno">CardNo</label>
+                            <input type="int" class="form-control" id="cardno" placeholder="CardNo" name="cardno">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="DateofBirth<">DateofBirth</label>
-                            <input type="Date" class="form-control" id="DateofBirth" placeholder="DateofBirth" name="DateofBirth">
+                            <label for="birthday<">Birthday</label>
+                            <input type="Date" class="form-control" id="birthday" placeholder="DateofBirth" name="birthday">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Tel">Telephone-number</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="Telephone-number" name="Tel">
+                            <label for="tel">Telephone-number</label>
+                            <input type="int" class="form-control" id="tel" placeholder="Telephone-number" name="tel">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Gender">Gender</label>
-                            <select name="Gender" class="form-control">
+                            <label for="gender">Gender</label>
+                            <select name="gender" class="form-control">
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Address">Address</label>
-                            <input type="text" class="form-control" id="Address" placeholder="Address" name="Address">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Address" name="address">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Province">Province</label>
-                            <select name="Province" class="form-control">
+                            <label for="province">Province</label>
+                            <select name="province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>
                                 <option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -297,32 +297,31 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="ZIPcode">ZIPcode</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="ZIPcode" name="ZIPcode">
+                            <label for="zipcode">ZIPcode</label>
+                            <input type="int" class="form-control" id="zipcode" placeholder="ZIPcode" name="zipcode">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Graduate">Graduate</label>
-                            <input type="text" class="form-control" id="Graduate" placeholder="Graduate" name="Graduate">
+                            <label for="graduate">Graduate</label>
+                            <input type="text" class="form-control" id="graduate" placeholder="Graduate" name="graduate">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="BranchName">BranchName</label>
-                            <select name="BranchName" class="form-control">
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
-                                <option value="โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
-                                <option value="กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ">กลุ่มงานการศึกษาอาชีพ กองส่งเสริมอาชีพ</option>
+                            <label for="branchid">BranchName</label>
+                            <select name="branchid" class="form-control">
+                                <option value="1">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 1)</option>
+                                <option value="2">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ดินแดง 2)</option>
+                                <option value="3">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (คลองเตย)</option>
+                                <option value="4">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บ่อนไก่)</option>
+                                <option value="5">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หนองจอก)</option>
+                                <option value="6">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (บางรัก)</option>
+                                <option value="7">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (หลวงพ่อทวีศักดิ์ฯ)</option>
+                                <option value="8">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (กาญจนสิงห์หาสน์ฯ)</option>
+                                <option value="9">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (ม้วน บำรุงศิลป์)</option>
+                                <option value="10">โรงเรียนฝึกอาชีพกรุงเทพมหานคร (อาทร สังขะวัฒนะ)</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6 ">
-                            <label for="Position">Position</label>
-                            <select name="Position" class="form-control">
+                            <label for="position">Position</label>
+                            <select name="position" class="form-control">
                                 <option value="Manager">Manager</option>
                                 <option value="Teacher">Teacher</option>
                             </select>

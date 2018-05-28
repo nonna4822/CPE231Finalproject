@@ -193,7 +193,7 @@
             <div class=\"dropdown\">
                 <a href=\"#\" class=\"button1\" style=\"width:50%\">
                     <img src=\"picture/user.png\" alt=\"\" width=\"20%\">
-                    <button onclick=\"myFunction()\" class=\"dropbtn\">Sign up</button>
+                    <button onmouseover=\"myFunction()\" class=\"dropbtn\">Sign up</button>
                     <div id=\"myDropdown\" class=\"dropdown-content\">
                         <a href='studentsignup.php'>Student</a>
                         <a href='staffregister.php'>Apply for job</a>

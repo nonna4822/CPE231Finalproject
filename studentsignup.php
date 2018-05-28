@@ -109,39 +109,39 @@
                 <form action="studentinsert.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="FirstName">FirstName</label>
-                            <input type="text" class="form-control" id="FirstName" placeholder="FirstName" name="FirstName">
+                            <label for="firstname">FirstName</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="FirstName" name="firstname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="LastName">LastName</label>
-                            <input type="text" class="form-control" id="LastName" placeholder="LastName" name="LastName">
+                            <label for="lastname">LastName</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="lastname" name="lastname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="CardNo">CardNo</label>
-                            <input type="int" class="form-control" id="CardNo" placeholder="CardNo" name="CardNo">
+                            <label for="cardno">CardNo</label>
+                            <input type="int" class="form-control" id="cardno" placeholder="CardNo" name="cardno">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="DateofBirth<">DateofBirth</label>
-                            <input type="Date" class="form-control" id="DateofBirth" placeholder="DateofBirth" name="DateofBirth">
+                            <label for="birthday<">DateofBirth</label>
+                            <input type="Date" class="form-control" id="birthday" placeholder="DateofBirth" name="birthday">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Tel">Telephone-number</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="Telephone-number" name="Tel">
+                            <label for="tel">Telephone-number</label>
+                            <input type="int" class="form-control" id="tel" placeholder="Telephone-number" name="tel">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Gender">Gender</label>
-                            <select name="Gender" class="form-control">
+                            <label for="gender">Gender</label>
+                            <select name="gender" class="form-control">
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Address">Address</label>
-                            <input type="text" class="form-control" id="Address" placeholder="Address" name="Address">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Address" name="address">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Province">Province</label>
-                            <select name="Province" class="form-control">
+                            <label for="province">Province</label>
+                            <select name="province" class="form-control">
                                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                                 <option value="กระบี่">กระบี่ </option>
                                 <option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -222,12 +222,12 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="ZIPcode">ZIPcode</label>
-                            <input type="int" class="form-control" id="Tel" placeholder="ZIPcode" name="ZIPcode">
+                            <label for="zipcode">ZIPcode</label>
+                            <input type="int" class="form-control" id="Tel" placeholder="zipcode" name="zipcode">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Occupation">Occupation</label>
-                            <input type="text" class="form-control" id="Occupation" placeholder="Occupation " name="Occupation">
+                            <label for="occupation">Occupation</label>
+                            <input type="text" class="form-control" id="occupation" placeholder="Occupation " name="occupation">
                         </div>
 
                         <div style="width:100%">

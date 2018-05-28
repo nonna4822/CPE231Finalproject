@@ -49,7 +49,6 @@ if($row['cardno'] != NULL){
     header("Location: signupsuccess.php");
     exit;
   }
-  mysqli_close($con);
 }
 
 

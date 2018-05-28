@@ -9,7 +9,7 @@
   $firstname = $_SESSION['firstname'];
   $lastname = $_SESSION['lastname'];
 
-  session_destroy();
+  session_unset();
   ?>
 
 <!DOCTYPE html>
@@ -93,7 +93,7 @@
                     </div>
                     <h1><strong>ลงทะเบียนสำเร็จ</strong></h1>
                     <h1><strong>ยินดีต้อนรับ</strong></h1>
-                    <h2><?php echo $_SESSION['firstname']." ".$_SESSION['lastname'] ?></h2>
+                    <h2><?php echo $firstname." ".$lastname ?></h2>
                     <h2>ใช้เบอร์โทรศัพท์ของคุณเป็นรหัสผ่านในการเข้าสู่ระบบ</h2>
                     <div class="form-group">
                         <a href="homepage.php" class="button">Home</a>
