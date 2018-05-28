@@ -3,6 +3,7 @@
   if(isset($_SESSION['firstname'])){
     $firstname = $_SESSION['firstname'];
     $lastname = $_SESSION['lastname'];
+    $cardno = $_SESSION['cardno'];
   } else {
     header("location : login.html");
     exit;
@@ -154,37 +155,64 @@ h2{
     </div>
 
     <div class="container-fluid" style="background-image:linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);">
-        <h2><strong>ตารางแสดงรายละเอียดการสอน</strong></h2>
+        <h2><strong>ตารางแสดงรายละเอียดการสอน (ยืนยันแล้ว)</strong></h2>
         <table class="table table-bordered gg" style="font-size:35px; text-align:center;">
             <thead>
                 <tr style="color:#6E038E;font-size:40px;">
-                    <th>Class Number</th>
-                    <th>Branch Name</th>
-                    <th>Section Name</th>
-                    <th>Subject Title</th>
-                    <th>Time</th>
+                  <th>Teaching id</th>
+                  <th>Section Name</th>
+                  <th>Subject</th>
+                  <th>Shift</th>
+                  <th>Branch Name</th>
+                  <th>Class No.</th>
                 </tr>
             </thead>
-            <tbody style="color:#4B4D4A;">
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
+            <tbody style="color:#4B4D4A;" id = "rowajax">
+
             </tbody>
-        </table>
+
+          </table>
     </div>
 
+    <!-- <button type="button" onclick="showsection()" name="button">button</button> -->
 
+    <script>
+    var cardno = <?php echo $cardno ?>;
+    showsection();
+    function showsection() {
+       if (cardno == "") {
+           document.getElementById("rowajax").innerHTML = "<tr>"+
+             "<td>test</td>" +
+             "<td>test</td>" +
+             "<td>test</td>" +
+             "<td>test</td>" +
+             "<td>test</td>" +
+           "</tr>";
+           return;
+       } else {
+         document.getElementById("rowajax").innerHTML = "<tr>"+
+         "<td>test2</td>" +
+         "<td>test2</td>" +
+         "<td>test2</td>" +
+         "<td>test2</td>" +
+         "<td>test2</td>" +
+       "</tr>";
+       }
+
+
+       {
+               xmlhttp = new XMLHttpRequest();
+               xmlhttp.onreadystatechange = function() {
+               if (this.readyState == 4 && this.status == 200) {
+                   document.getElementById("rowajax").innerHTML = this.responseText;
+               }
+           };
+           xmlhttp.open("GET","staffviewajax.php?cardno="+cardno,true);
+           xmlhttp.send();
+       }
+    }
+
+    </script>
 </body>
 
 </html>
