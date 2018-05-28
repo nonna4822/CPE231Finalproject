@@ -217,7 +217,6 @@
         </div>
     </div> -->
 
-<body>
 
 <form>
 
@@ -290,7 +289,7 @@ function showsection() {
                document.getElementById("txtHint").innerHTML = this.responseText;
            }
        };
-       xmlhttp.open("GET","teachingajax.php?p1="+branchid+"&p2="+subjectid+"\"",true);
+       xmlhttp.open("GET","teachingajax.php?p1="+branchid+"&p2="+subjectid,true);
        xmlhttp.send();
    }
 }

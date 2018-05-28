@@ -14,10 +14,10 @@
   include 'connect.php';
 
   //find section ***
-  // $sql = "SELECT * FROM section WHERE branchid = '$branchid' AND subjectid = '$subjectid'";
   $sql = "SELECT se.sectionid,se.sectionname,s.subjecttitle ,se.shift,b.branchname
   FROM section se LEFT join subject s on se.subjectid = s.subjectid
-  LEFT join branch b on b.branchid = se.branchid ";
+  LEFT join branch b on b.branchid = se.branchid
+  WHERE b.branchid = '$branchid' AND s.subjectid = '$subjectid'";
 
   if (!mysqli_query($con,$sql)) {
       echo('Error: select section ' . mysqli_error($con));
