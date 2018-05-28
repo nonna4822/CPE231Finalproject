@@ -10,6 +10,8 @@ session_unset();
 $cardno = mysqli_real_escape_string($con,$_POST['cardno']);
 $tel =  mysqli_real_escape_string($con,$_POST['tel']);
 $choice = mysqli_real_escape_string($con,$_POST['choice']);
+$_SESSION['choice'] = $choice;
+// $_SESSION['cardno'] = $cardno;
 
 // Check connection
 if (!$con) {

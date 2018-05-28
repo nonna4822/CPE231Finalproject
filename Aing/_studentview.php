@@ -121,14 +121,13 @@ h2{
             <div class="menubar">
                 <div class="col">
                     <div class="col-sm-5" style="color:white; font-size:35px; text-align:center;margin-left:800px;">
-
                         <div class="form-group">
-
-                            <a class="button1" style="width:250px">
-                                <strong> <?php echo $firstname." ".$lastname ?></strong>
+                            <a href='homepage.php' class="button1" style="width:250px">
+                                <img src="../webpage/house.png" alt="" width="30px">
+                                <strong> Home</strong>
                             </a>
                             <a href='logout.php' class="button1" style="width:250px">
-                                <img src="picture/login (1).png" alt="" width="40px">
+                                <img src="../pictures/login (1).png" alt="" width="40px">
                                 <strong> Log out</strong>
                             </a>
                         </div>
@@ -136,9 +135,8 @@ h2{
 
                     <div class="col-sm-12" style="color:white; font-size:35px; text-align:left;">
                         <div class="form-group">
-                            <a href='homepage.php' class="button1" style="width:250px">
-                                <img src="picture/house.png" alt="" width="30px">
-                                <strong> Home</strong>
+                            <a href='studentview.php' class="button1" style="width:250px">
+                                <strong> Hi, Username</strong>
                             </a>
                             <a href='enrollment.php' class="button1" style="width:250px">
                                 <strong> Enrollment</strong>

@@ -20,7 +20,7 @@
             }
 
             html {
-                background: url(home1.jpg) no-repeat center center fixed;
+                background: url(../picture/home1.jpg) no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -131,7 +131,7 @@
                     <div class="col-sm-4" style="color:white; font-size:25px; text-align:center; ">
                         <div class="form-group">
                             <a href="#" class="button1" style="width:50%">
-                                <img src="../webpage/house.png" alt="" width="30%">
+                                <img src="../picture/house.png" alt="" width="30%">
                                 <strong> Home</strong>
                             </a>
                         </div>
@@ -142,7 +142,7 @@
         <div class=\"form-group\">
             <div class=\"dropdown\">
                 <a href=\"#\" class=\"button1\" style=\"width:70%\">
-                    <img src=\"../pictures/user.png\" alt=\"\" width=\"20%\">
+                    <img src=\"../picture/user.png\" alt=\"\" width=\"20%\">
                     <button onclick=\"myFunction()\" class=\"dropbtn\">".$_SESSION['firstname']." ".$_SESSION['lastname']."</button>
                     <div id=\"myDropdown\" class=\"dropdown-content\">
                         <a href='enrollment.php'>Enrollment</a>
@@ -157,7 +157,7 @@
         echo "  <div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
         <div class=\"form-group\">
             <a href='logout.php' class=\"button1\" style=\"width:40%\">
-                <img src=\"../pictures/login (1).png\" alt=\"\" width=\"30%\">
+                <img src=\"../picture/login (1).png\" alt=\"\" width=\"30%\">
                 <strong> Log out</strong>
             </a>
         </div>
@@ -167,7 +167,7 @@
         <div class=\"form-group\">
             <div class=\"dropdown\">
                 <a href=\"#\" class=\"button1\" style=\"width:50%\">
-                    <img src=\"../pictures/user.png\" alt=\"\" width=\"20%\">
+                    <img src=\"../picture/user.png\" alt=\"\" width=\"20%\">
                     <button onclick=\"myFunction()\" class=\"dropbtn\">Sign up</button>
                     <div id=\"myDropdown\" class=\"dropdown-content\">
                         <a href='studentregister.php'>Student</a>
@@ -182,7 +182,7 @@
           echo "<div class=\"col-sm-4\" style=\"color:white; font-size:25px;text-align:center;\">
           <div class=\"form-group\">
               <a href='login.html' class=\"button1\" style=\"width:40%\">
-                  <img src=\"../pictures/login (1).png\" alt=\"\" width=\"30%\">
+                  <img src=\"../picture/login (1).png\" alt=\"\" width=\"30%\">
                   <strong> Log in</strong>
               </a>
           </div>
@@ -218,7 +218,7 @@
                         <div class="col-sm-4" style="color:white; font-size:25px;text-align:center;">
                             <div class="form-group">
                                 <a href="#" class="button1" style="width:50%">
-                                    <img src="../pictures/folder.png" alt="" width="20%">
+                                    <img src="../picture/folder.png" alt="" width="20%">
                                     <strong> ข้อมูลเชิงลึก</strong>
                                 </a>
                             </div>
@@ -233,22 +233,22 @@
                     <div class="col-sm-4" style="color:white; font-size:35px; text-align:center; ">
                         <strong>Courses offered</strong>
                         <div>
-                            <img src="../webpage/scholarship.png" alt="" width="30%">
+                            <img src="../picture/scholarship.png" alt="" width="30%">
                         </div>
                         <div class="form-group">
                             <a href='courseoffer.php' class="button" style="width:50%">
-                                <img src="../pictures/123376.png" alt="" width="20%"> view more
+                                <img src="../picture/123376.png" alt="" width="20%"> view more
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4" style="color:white; font-size:35px;text-align:center;">
                         <strong>Branch Information</strong>
                         <div>
-                            <img src="../pictures/school.png" alt="" width="30%">
+                            <img src="../picture/school.png" alt="" width="30%">
                         </div>
                         <div class="form-group">
                             <a href='branchinfo.php' class="button" style="width:50%">
-                                <img src="../pictures/123376.png" alt="" width="20%"> view more
+                                <img src="../picture/123376.png" alt="" width="20%"> view more
                             </a>
                         </div>
                     </div>
@@ -256,22 +256,22 @@
                     <div class="col-sm-4" style="color:white; font-size:35px;text-align:center;">
                         <strong>Teacher Information</strong>
                         <div>
-                            <img src="../pictures/presentation.png" alt="" width="30%">
+                            <img src="../picture/presentation.png" alt="" width="30%">
                         </div>
                         <div class="form-group">
                             <a href='staffinformation.php' class="button" style="width:50%">
-                                <img src="../pictures/123376.png" alt="" width="20%"> view more
+                                <img src="../picture/123376.png" alt="" width="20%"> view more
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-4" style="color:white; font-size:35px;text-align:center;">
                         <strong>คำถามที่พบบ่อย</strong>
                         <div>
-                            <img src="../pictures/question (1).png" alt="" width="30%">
+                            <img src="../picture/question (1).png" alt="" width="30%">
                         </div>
                         <div class="form-group">
                             <a href="#" class="button" style="width:50%">
-                                <img src="../pictures/123376.png" alt="" width="20%"> view more
+                                <img src="../picture/123376.png" alt="" width="20%"> view more
                             </a>
                         </div>
                     </div>
@@ -280,7 +280,7 @@
         </div>
 
         <script>
-            /* When the user clicks on the button, 
+            /* When the user clicks on the button,
                                                                                                                         toggle between hiding and showing the dropdown content */
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
