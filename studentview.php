@@ -158,28 +158,24 @@ h2{
         <h2><strong>Enrollment Table</strong></h2>
         <table class="table table-bordered gg" style="font-size:35px; text-align:center;">
             <thead>
-                <tr style="color:#6E038E;font-size:40px;">
-                    <th>Subject ID</th>
-                    <th>Subject Title</th>
-                    <th>Status</th>
-                </tr>
+              <tr style="color:#8F038E;font-size:40px;">
+                <th>Section id</th>
+                <th>Section Name</th>
+                <th>Subject</th>
+                <th>Shift</th>
+                <th>Branch Name</th>
+                <th>Class No.</th>
+              </tr>
             </thead>
             <tbody style="color:#4B4D4A;">
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                </tr>
+              <tr style="color:#6E038E;font-size:40px;">
+                <td>124a</td>
+                <td>A</td>
+                <td>ช่างไฟ</td>
+                <td>รอบเช้า (8:30 - 11.30 น.)</td>
+                <td>ศูนย์ฝึกอาชีพกรุงเทพมหานคร อาทร วัฒนะ</td>
+                <td>1204</td>
+              </tr>
             </tbody>
         </table>
     </div>
