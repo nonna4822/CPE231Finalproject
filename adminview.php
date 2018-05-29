@@ -78,8 +78,6 @@
         <button class="green" type="button" onclick="location.href='adminteachingform.php'">Register Teaching request </button>
 
         <div id="txtHint"><b>text</b></div>
-
-        <div id="end"><b>text</b></div>
       </center>
 
 
@@ -100,17 +98,6 @@
            xmlhttp.open("GET","showsectionblank.php?",true);
            xmlhttp.send();
     }
-
-    // function delete(sectionid) {
-    //        xmlhttp = new XMLHttpRequest();
-    //        xmlhttp.onreadystatechange = function() {
-    //          if (this.readyState == 4 && this.status == 200) {
-    //            document.getElementById("end").innerHTML = this.responseText;
-    //          }
-    //        };
-    //        xmlhttp.open("GET", "deletesection.php="+sectionid, true);
-    //        xmlhttp.send();
-    // }
 
     </script>
 

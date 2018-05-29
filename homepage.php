@@ -247,7 +247,7 @@
 
                         <div class="col-sm-4" style="color:white; font-size:25px;text-align:center;">
                             <div class="form-group">
-                                <a href="deepdata.php" class="button1" style="width:50%">
+                                <a href="allanalysis.php" class="button1" style="width:50%">
                                     <img src="picture/folder.png" alt="" width="20%">
                                     <strong> ข้อมูลเชิงลึก</strong>
                                 </a>

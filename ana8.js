@@ -1,10 +1,15 @@
 $(document).ready(function () {
     $.ajax({
+<<<<<<< HEAD
         url: location.protocol + '//' + location.host + "/project2/analysis8.php",
+=======
+        url: location.protocol + '//' + location.host + "analysis8.php",
+>>>>>>> 2af8fa455308db430bda34974d7f05e7dcf444df
         method: "GET",
         success: function (data) {
             console.log(data);
             var Teacher = [];
+<<<<<<< HEAD
        
             var classno = [];
           
@@ -14,6 +19,17 @@ $(document).ready(function () {
                 Teacher.push(data[i].Teacher);
                 classno.push(data[i].classno);
               
+=======
+
+            var classno = [];
+
+
+            for (var i in data) {
+
+                Teacher.push(data[i].Teacher);
+                classno.push(data[i].classno);
+
+>>>>>>> 2af8fa455308db430bda34974d7f05e7dcf444df
             }
 
             var chartdata = {
@@ -39,4 +55,8 @@ $(document).ready(function () {
             console.log(data);
         }
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2af8fa455308db430bda34974d7f05e7dcf444df

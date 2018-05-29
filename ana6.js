@@ -1,6 +1,10 @@
 $(document).ready(function(){
 	$.ajax({
+<<<<<<< HEAD
 		url: location.protocol + '//' + location.host +	"/project2/analysis6.php",
+=======
+		url: location.protocol + '//' + location.host +	"analysis6.php",
+>>>>>>> 2af8fa455308db430bda34974d7f05e7dcf444df
 		method: "GET",
 		success: function(data) {
 			console.log(data);
@@ -37,4 +41,8 @@ $(document).ready(function(){
 			console.log(data);
 		}
 	});
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2af8fa455308db430bda34974d7f05e7dcf444df
